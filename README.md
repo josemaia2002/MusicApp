@@ -12,3 +12,8 @@
 ### ls ###
 ### ssh-keygen ###
 ### cat ~/.ssh/id_rsa.pub ### 
+
+## Useful links ##
+
+### https://git-scm.com/book/pt-pt/v2/Git-no-Servidor-Generating-Your-SSH-Public-Key ###
+### https://www.geeksforgeeks.org/what-is-linked-list// ###
