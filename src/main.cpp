@@ -1,14 +1,9 @@
 #include <iostream>
 #include <string>
 #include "Musica.h"
+#include "Node.h"
 
 using namespace std;
-  
-class Node {
-public:
-    Musica m;
-    Node* next;
-};
   
 void printList(Node* n){
     while (n != NULL) {
