@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16.3)
+cmake_minimum_required(VERSION 3.22.1)
 project(teste VERSION 0.1 LANGUAGES CXX )
 
 include_directories( include )
@@ -6,4 +6,6 @@ include_directories( include )
 
 add_executable( program
                 src/main.cpp
+                src/Node.cpp
+                src/List.cpp                
                 src/Musica.cpp )

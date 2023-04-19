@@ -2,9 +2,11 @@
 #include <string>
 #include "Musica.h"
 #include "Node.h"
+#include "List.h"
 
 using namespace std;
-  
+
+/*  
 void printList(Node* n){
     while (n != NULL) {
         cout << n->m << " ";
@@ -13,36 +15,23 @@ void printList(Node* n){
         cout << endl;
     }
 }
+*/ 
   
 int main(){
-    Node* head = NULL;
-    Node* second = NULL;
-    Node* third = NULL;
-  
-    head = new Node();
-    second = new Node();
-    third = new Node();
+    List l;
+    
+    l.insertNode("Fear of the Dark", "Iron Maiden");
+    l.insertNode("Highway to Hell", "ACDC");
+    l.insertNode("Holy Diver", "DIO");
+    l.insertNode("The Thrill is Gone", "B.B. King");
+    l.insertNode("Staying Alive", "Bee Gees");
+    l.insertNode("Breaking the Law", "Judas Priest");
+    l.insertNode("Kashmir", "Led Zeppelin");
+    l.insertNode("Commando", "Ramones");
+    l.insertNode("Holiday in Cambodia", "Dead Kennedys");
+    l.insertNode("YYZ", "Rush");
 
-    Musica m1, m2, m3;
-
-    m1.setTitulo("Fear of the Dark");
-    m2.setTitulo("Do It Again");
-    m3.setTitulo("Could You Be Loved");
-
-    m1.setArtista("Iron Maiden");
-    m2.setArtista("Steely Dan");
-    m3.setArtista("Bob Marley");
-  
-    head->m = m1; 
-    head->next = second; 
-  
-    second->m = m2; 
-    second->next = third;
-  
-    third->m = m3; 
-    third->next = NULL;
-  
-    printList(head);
-  
+    l.printList();
+    
     return 0;
 }
