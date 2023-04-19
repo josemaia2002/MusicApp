@@ -6,20 +6,9 @@
 
 using namespace std;
 
-/*  
-void printList(Node* n){
-    while (n != NULL) {
-        cout << n->m << " ";
-        n = n->next;
-
-        cout << endl;
-    }
-}
-*/ 
-  
 int main(){
     List l;
-    
+
     l.insertNode("Fear of the Dark", "Iron Maiden");
     l.insertNode("Highway to Hell", "ACDC");
     l.insertNode("Holy Diver", "DIO");
