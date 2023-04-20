@@ -10,9 +10,7 @@ class Playlist {
 
 public:
     string nome;
-    List 
-    Node* head;
-    Node* tail;
+    //List* musicas;
 };
 
 #endif

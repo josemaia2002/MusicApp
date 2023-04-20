@@ -7,6 +7,7 @@ using namespace std;
 #ifndef NODE_H
 #define NODE_H
 
+// TODO convert to template
 class Node {
 
 public:
