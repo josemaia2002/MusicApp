@@ -7,7 +7,7 @@ using namespace std;
 List::List(){
     head = nullptr;
     tail = nullptr;
-    size = 1;
+    size = 0;
 }
 
 List::~List(){
@@ -28,6 +28,7 @@ void List::insertNode(string titulo, string artista){
     if(head == nullptr) {
         head = n;
         tail = n;
+        size++;
         return;
     }
 
