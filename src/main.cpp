@@ -51,9 +51,14 @@ int main(){
     cout << "_______________________________________" << endl;
 
     l.printList();
-    l.deleteNode(4);
-    l.printList();
     cout << "Tamanha da lista 1 " << l.size << endl;
+    l.deleteNode(1);
+    cout << "Tamanha da lista 1 " << l.size << endl;
+    l.deleteNode(2);
+    cout << "Tamanha da lista 1 " << l.size << endl;
+    l.deleteNode(3);
+    cout << "Tamanha da lista 1 " << l.size << endl;
+    l.printList();
 
     return 0;
 }

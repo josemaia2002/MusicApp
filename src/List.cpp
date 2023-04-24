@@ -22,43 +22,20 @@ List::~List(){
 }
 
 void List::insertNode(string titulo, string artista){
-    /*
-    Node* n = new Node(titulo, artista); // Create a new node;
-    tail->next = nullptr;
-
-    if(head == nullptr) {
-        head = n;
-        return;
-    }
-
-    Node* temp = tail;
-    temp->next = n;
-
-    size++; // Increase the list size
-    */
-
-    
     Node* n = new Node(titulo, artista); // Create a new node;
 
     // Insert at the beginning if head is pointing to nullptr
     if(head == nullptr) {
         head = n;
+        tail = n;
         return;
     }
 
-    // Traverse the whole list
-    Node* temp = head;
-    while(temp->next != nullptr){
-        temp = temp->next; // Stepping to the next node of the list
-    }
-
-    // Insert the node at the last
-    temp->next = n;
+    // Insert the node at the tail
+    tail->next = n;
+    tail = n;
 
     size++; // Increase the list size
-    
-    
-
 }
 
 void List::search(int index){
@@ -93,8 +70,6 @@ void List::printList(){
 }
 
 void List::deleteNode(int position){
-    int i = 0;
-
     if(head == nullptr){
         cout << "Empty list!!" << endl;
         return;
