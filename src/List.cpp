@@ -5,8 +5,8 @@
 using namespace std;
 
 List::List(){
-    head = NULL;
-    tail = NULL;
+    head = nullptr;
+    tail = nullptr;
     size = 1;
 }
 
@@ -15,17 +15,33 @@ List::~List(){
 }
 
 void List::insertNode(string titulo, string artista){
+    /*
+    Node* n = new Node(titulo, artista); // Create a new node;
+    tail->next = nullptr;
+
+    if(head == nullptr) {
+        head = n;
+        return;
+    }
+
+    Node* temp = tail;
+    temp->next = n;
+
+    size++; // Increase the list size
+    */
+
+    
     Node* n = new Node(titulo, artista); // Create a new node;
 
-    // Insert at the beginning if head is pointing to NULL
-    if(head == NULL) {
+    // Insert at the beginning if head is pointing to nullptr
+    if(head == nullptr) {
         head = n;
         return;
     }
 
     // Traverse the whole list
     Node* temp = head;
-    while(temp->next != NULL){
+    while(temp->next != nullptr){
         temp = temp->next; // Stepping to the next node of the list
     }
 
@@ -33,6 +49,8 @@ void List::insertNode(string titulo, string artista){
     temp->next = n;
 
     size++; // Increase the list size
+    
+    
 
 }
 
@@ -57,13 +75,48 @@ void List::printList(){
     Node* temp = head;
 
     // Check if the Linked list is empty
-    if(head == NULL)
+    if(head == nullptr)
         return;
 
     // Traverse the list
-    while(temp != NULL){
+    while(temp != nullptr){
         cout << temp->m << " ";
         temp = temp->next;
         cout << endl;
     }
+}
+
+void List::deleteNode(int position){
+    int i = 0;
+
+    if(head == nullptr){
+        cout << "Empty list!!" << endl;
+        return;
+    }
+
+    if(position > size){
+        cout << "Out of bounds!" << endl;
+        return;
+    }
+
+    Node* temp = head;
+    Node* temp2 = nullptr;
+
+    // Delete the head
+    if(position == 1){
+        head = head->next; // Head receives the pointer to its successor
+        delete temp; // The pointer that stores the old head is deleted
+        return;
+    }
+
+    // Traverse the list untill the the desired index is found
+    while(position > 1 ){
+        temp2 = temp;
+        temp = temp->next;
+        
+        position--;
+    }
+
+    temp2->next = temp->next;
+    delete temp;
 }

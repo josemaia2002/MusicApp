@@ -8,12 +8,12 @@ Node::Node(){
     m.setTitulo(" ");
     m.setArtista(" ");
 
-    next = NULL;
+    next = nullptr;
 }
 
 Node::Node(string titulo, string artista){
     m.setTitulo(titulo);
     m.setArtista(artista);
 
-    next = NULL;
+    next = nullptr;
 }

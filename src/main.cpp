@@ -47,5 +47,12 @@ int main(){
     l2.search(2);
     l3.search(1);
 
+    cout << endl << endl << endl;
+    cout << "_______________________________________" << endl;
+
+    l.printList();
+    l.deleteNode(4);
+    l.printList();
+
     return 0;
 }

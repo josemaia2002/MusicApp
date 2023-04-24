@@ -14,13 +14,12 @@ public:
     Node* tail;
     int size;
 public:
-    //TODO implement the search function
     List(); 
     ~List(); // TODO implement destructor
     void insertNode(string titulo, string artista); // TODO update the insert function
     void printList();
     void search(int index);
-    // void deleteNode(int position); 
+    void deleteNode(int position); 
 };
 
 #endif
