@@ -9,15 +9,17 @@ using namespace std;
 
 // TODO convert to template
 class List {
+public:    
     Node* head;
-    // TODO create the tail pointer
-    // TODO create the size variable
+    Node* tail;
+    int size;
 public:
     //TODO implement the search function
     List(); 
-    // TODO implement destructor
+    ~List(); // TODO implement destructor
     void insertNode(string titulo, string artista); // TODO update the insert function
     void printList();
+    void search(int index);
     // void deleteNode(int position); 
 };
 

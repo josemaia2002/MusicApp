@@ -6,6 +6,12 @@ using namespace std;
 
 List::List(){
     head = NULL;
+    tail = NULL;
+    size = 1;
+}
+
+List::~List(){
+    cout << "List destroyed!" << endl;
 }
 
 void List::insertNode(string titulo, string artista){
@@ -26,6 +32,25 @@ void List::insertNode(string titulo, string artista){
     // Insert the node at the last
     temp->next = n;
 
+    size++; // Increase the list size
+
+}
+
+void List::search(int index){
+    int i = 0;
+    if(index > size)
+        cout << "Out of bounds!" << endl;
+    else{
+        
+        Node* temp = head;
+        // Traverse the list untill the the desired index is found
+        while(i < (index-1)){
+            temp = temp->next; // Stepping to the next node of the list
+            i++;
+        }
+
+        cout << temp->m << " " << endl;
+    }
 }
 
 void List::printList(){
