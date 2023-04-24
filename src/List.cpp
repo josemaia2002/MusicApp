@@ -87,6 +87,7 @@ void List::deleteNode(int position){
     if(position == 1){
         head = head->next; // Head receives the pointer to its successor
         delete temp; // The pointer that stores the old head is deleted
+        size--;
         return;
     }
 
