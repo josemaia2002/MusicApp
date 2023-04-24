@@ -11,7 +11,14 @@ List::List(){
 }
 
 List::~List(){
-    cout << "List destroyed!" << endl;
+    Node* temp = head;
+
+    // Traverse the list deleting each node
+    while(temp != nullptr){
+        Node* temp2 = temp;
+        temp = temp->next;
+        delete temp2;
+    }
 }
 
 void List::insertNode(string titulo, string artista){

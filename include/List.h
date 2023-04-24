@@ -15,7 +15,7 @@ public:
     int size;
 public:
     List(); 
-    ~List(); // TODO implement destructor
+    ~List();
     void insertNode(string titulo, string artista); // TODO update the insert function
     void printList();
     void search(int index);
