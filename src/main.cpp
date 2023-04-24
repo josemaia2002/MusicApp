@@ -53,6 +53,7 @@ int main(){
     l.printList();
     l.deleteNode(4);
     l.printList();
+    cout << "Tamanha da lista 1 " << l.size << endl;
 
     return 0;
 }

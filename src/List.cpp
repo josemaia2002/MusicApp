@@ -56,19 +56,18 @@ void List::insertNode(string titulo, string artista){
 
 void List::search(int index){
     int i = 0;
-    if(index > size)
+    if(index > size){
         cout << "Out of bounds!" << endl;
-    else{
-        
-        Node* temp = head;
-        // Traverse the list untill the the desired index is found
-        while(i < (index-1)){
-            temp = temp->next; // Stepping to the next node of the list
-            i++;
-        }
-
-        cout << temp->m << " " << endl;
+        return;
     }
+
+    Node* temp = head;
+    // Traverse the list untill the the desired index is found
+    while(i < (index-1)){
+        temp = temp->next; // Stepping to the next node of the list
+        i++;
+    }
+    cout << temp->m << " " << endl;
 }
 
 void List::printList(){
@@ -119,4 +118,6 @@ void List::deleteNode(int position){
 
     temp2->next = temp->next;
     delete temp;
+
+    size--; // Decrease the list size
 }
