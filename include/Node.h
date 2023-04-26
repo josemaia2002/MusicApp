@@ -15,7 +15,7 @@ public:
     Node* next;
 
     Node(); // Default constructor
-    Node(string titulo, string artista); // Specific constructor
+    Node(Musica musica); // Specific constructor
 };
 
 #endif

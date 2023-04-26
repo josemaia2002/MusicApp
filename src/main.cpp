@@ -7,57 +7,24 @@
 using namespace std;
 
 int main(){
-    List l, l2, l3;
+    string titulo, artista;
+    Musica m1;
+    List l;
 
-    l.insertNode("Fear of the Dark", "Iron Maiden");
-    l.insertNode("Highway to Hell", "ACDC");
-    l.insertNode("Holy Diver", "DIO");
-    l.insertNode("The Thrill is Gone", "B.B. King");
-    l.insertNode("Staying Alive", "Bee Gees");
-    l.insertNode("Breaking the Law", "Judas Priest");
-    l.insertNode("Kashmir", "Led Zeppelin");
-    l.insertNode("Commando", "Ramones");
-    l.insertNode("Holiday in Cambodia", "Dead Kennedys");
-    l.insertNode("YYZ", "Rush");
+    for(int i = 0; i < 5; i++){
+        getline (cin, titulo);
+        getline (cin, artista);
 
-    l2.insertNode("Misirlou", "Dick Dale");
-    l2.insertNode("I Shot the Sheriff", "Bob Marley");
-    l2.insertNode("Toxic", "Britney Spears");
+        m1 = Musica(titulo, artista); // Create a new song;
+        Node* n = new Node(m1); // Create a new node;
 
-    l3.insertNode("Haruka Kanata", "Asian Kung-Fu Generation");
+        l.insertNode(n);
+    }
 
-    cout << "Primeira lista" << endl;
     l.printList();
-    cout << "Segunda lista" << endl;
-    l2.printList();
-    cout << "Terceira lista" << endl;
-    l3.printList();
-
-    cout << "Tamanha da lista 1 " << l.size << endl;
-    cout << "Tamanha da lista 2 " << l2.size << endl;
-    cout << "Tamanha da lista 3 " << l3.size << endl;
-
-    cout << endl << endl << endl;
-    cout << "_______________________________________" << endl;
-
-    l.search(1);
-    l.search(2);
     l.search(3);
-    l.search(10);
-    l2.search(2);
-    l3.search(1);
-
-    cout << endl << endl << endl;
-    cout << "_______________________________________" << endl;
-
-    l.printList();
-    cout << "Tamanha da lista 1 " << l.size << endl;
-    l.deleteNode(1);
-    cout << "Tamanha da lista 1 " << l.size << endl;
-    l.deleteNode(2);
-    cout << "Tamanha da lista 1 " << l.size << endl;
+    l.search(1);
     l.deleteNode(3);
-    cout << "Tamanha da lista 1 " << l.size << endl;
     l.printList();
 
     return 0;

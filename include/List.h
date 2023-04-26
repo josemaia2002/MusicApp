@@ -16,7 +16,7 @@ public:
 public:
     List(); 
     ~List();
-    void insertNode(string titulo, string artista); 
+    void insertNode(Node* n); 
     void printList();
     void search(int index);
     void deleteNode(int position); 

@@ -21,8 +21,8 @@ List::~List(){
     }
 }
 
-void List::insertNode(string titulo, string artista){
-    Node* n = new Node(titulo, artista); // Create a new node;
+void List::insertNode(Node* n){
+    //Node* n = new Node(m); // Create a new node;
 
     // Insert at the beginning if head is pointing to nullptr
     if(head == nullptr) {
