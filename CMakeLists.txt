@@ -7,5 +7,6 @@ include_directories( include )
 add_executable( program
                 src/main.cpp
                 src/Node.cpp
-                src/List.cpp                
+                src/List.cpp
+                src/Playlist.cpp                
                 src/Musica.cpp )

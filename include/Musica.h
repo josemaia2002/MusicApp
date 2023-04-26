@@ -7,7 +7,6 @@ using namespace std;
 #define MUSICA_H
 
 class Musica {
-
 private:
     string titulo;
     string artista;

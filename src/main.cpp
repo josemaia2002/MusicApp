@@ -3,6 +3,7 @@
 #include "Musica.h"
 #include "Node.h"
 #include "List.h"
+#include "Playlist.h"
 #include "Node.cpp"
 #include "List.cpp"
 
@@ -28,6 +29,19 @@ int main(){
     l.search(1);
     l.deleteNode(3);
     l.printList();
+
+
+    Playlist rock, blues, samba, mpb;
+    rock = Playlist("Rock");
+    blues = Playlist("Blues");
+    samba = Playlist("Samba");
+    mpb = Playlist("MPB");
+
+    
+    samba.printPlaylist();
+    blues.printPlaylist();
+    mpb.printPlaylist();
+    rock.printPlaylist();
 
     return 0;
 }
