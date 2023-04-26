@@ -4,24 +4,27 @@
 
 using namespace std;
 
-List::List(){
+template<class T>
+List<T>::List(){
     head = nullptr;
     tail = nullptr;
     size = 0;
 }
 
-List::~List(){
-    Node* temp = head;
+template<class T>
+List<T>::~List(){
+    Node<T>* temp = head;
 
     // Traverse the list deleting each node
     while(temp != nullptr){
-        Node* temp2 = temp;
+        Node<T>* temp2 = temp;
         temp = temp->next;
         delete temp2;
     }
 }
 
-void List::insertNode(Node* n){
+template<class T>
+void List<T>::insertNode(Node<T>* n){
     //Node* n = new Node(m); // Create a new node;
 
     // Insert at the beginning if head is pointing to nullptr
@@ -39,24 +42,26 @@ void List::insertNode(Node* n){
     size++; // Increase the list size
 }
 
-void List::search(int index){
+template<class T>
+void List<T>::search(int index){
     int i = 0;
     if(index > size){
         cout << "Out of bounds!" << endl;
         return;
     }
 
-    Node* temp = head;
+    Node<T>* temp = head;
     // Traverse the list untill the the desired index is found
     while(i < (index-1)){
         temp = temp->next; // Stepping to the next node of the list
         i++;
     }
-    cout << temp->m << " " << endl;
+    cout << temp->data << " " << endl;
 }
 
-void List::printList(){
-    Node* temp = head;
+template<class T>
+void List<T>::printList(){
+    Node<T>* temp = head;
 
     // Check if the Linked list is empty
     if(head == nullptr)
@@ -64,13 +69,14 @@ void List::printList(){
 
     // Traverse the list
     while(temp != nullptr){
-        cout << temp->m << " ";
+        cout << temp->data << " ";
         temp = temp->next;
         cout << endl;
     }
 }
 
-void List::deleteNode(int position){
+template<class T>
+void List<T>::deleteNode(int position){
     if(head == nullptr){
         cout << "Empty list!!" << endl;
         return;
@@ -81,8 +87,8 @@ void List::deleteNode(int position){
         return;
     }
 
-    Node* temp = head;
-    Node* temp2 = nullptr;
+    Node<T>* temp = head;
+    Node<T>* temp2 = nullptr;
 
     // Delete the head
     if(position == 1){

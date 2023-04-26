@@ -4,12 +4,14 @@
 
 using namespace std;
 
-Node::Node(){
+template<class T>
+Node<T>::Node(){
     next = nullptr;
 }
 
-Node::Node(Musica musica){
-    m = musica;
+template<class T>
+Node<T>::Node(T data){
+    this->data = data;
 
     next = nullptr;
 }

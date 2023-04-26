@@ -7,15 +7,15 @@ using namespace std;
 #ifndef NODE_H
 #define NODE_H
 
-// TODO convert to template
+template<class T>
 class Node {
 
 public:
-    Musica m;
+    T data;
     Node* next;
 
     Node(); // Default constructor
-    Node(Musica musica); // Specific constructor
+    Node(T data); // Specific constructor
 };
 
 #endif

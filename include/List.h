@@ -7,16 +7,16 @@ using namespace std;
 #ifndef LIST_H
 #define LIST_H
 
-// TODO convert to template
+template<class T>
 class List {
 public:    
-    Node* head;
-    Node* tail;
+    Node<T>* head;
+    Node<T>* tail;
     int size;
 public:
     List(); 
     ~List();
-    void insertNode(Node* n); 
+    void insertNode(Node<T>* n); 
     void printList();
     void search(int index);
     void deleteNode(int position); 
