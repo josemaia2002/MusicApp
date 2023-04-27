@@ -12,15 +12,6 @@ Playlist::Playlist(string nome){
     this->nome = nome;
 }
 
-/*
-Playlist::Playlist(string nome, List<Musica>& musicas){
-    this->nome = nome;
-    this->musicas = musicas;
-}
-*/
-
-
-void Playlist::printPlaylist(){
-    cout << this->nome << endl;
-    // this->musicas.printList();
+ostream &operator<<( ostream &output, const Playlist &P ) { 
+    P.musicas.printList();
 }

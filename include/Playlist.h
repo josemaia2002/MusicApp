@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "List.h"
 
 using namespace std;
 
@@ -10,12 +11,11 @@ using namespace std;
 class Playlist {
 public:
     string nome;
-    //List<Musica> musicas;
+    List<Musica> musicas;
 
     Playlist();
     Playlist(string nome);
-    //Playlist(string nome, List<Musica>& musicas);
-    void printPlaylist();
+    friend ostream &operator<<(ostream &output, const Playlist &P);
 };
 
 #endif
