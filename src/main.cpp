@@ -9,60 +9,46 @@
 
 using namespace std;
 
+// TODO Implement list of playlists
 int main(){
     string titulo, artista;
     Musica m1;
     List<Musica> l;
     List<Playlist> playlists;
-    Playlist mpb, rock;
+    Playlist p1, p2;
 
+    cout << "Playlist Name:" << endl;
+    getline(cin, p1.nome);
     for(int i = 0; i < 2; i++){
-        getline (cin, titulo);
-        getline (cin, artista);
+        getline(cin, titulo);
+        getline(cin, artista);
 
         m1 = Musica(titulo, artista); // Create a new song;
-        Node<Musica>* n = new Node(m1); // Create a new node;
+        Node<Musica>* n = new Node<Musica>(m1); // Create a new node;
 
-        mpb.musicas.insertNode(n);
+        p1.musicas.insertNode(n);
     }
 
+    cout << "Playlist Name:" << endl;
+    getline(cin, p2.nome);
     for(int i = 0; i < 2; i++){
-        getline (cin, titulo);
-        getline (cin, artista);
+        getline(cin, titulo);
+        getline(cin, artista);
 
         m1 = Musica(titulo, artista); // Create a new song;
-        Node<Musica>* n1 = new Node(m1); // Create a new node;
+        Node<Musica>* n1 = new Node<Musica>(m1); // Create a new node;
 
-        rock.musicas.insertNode(n1);
+        p2.musicas.insertNode(n1);
     }
 
-    Node<Playlist>* nodePlaylist1 = new Node(mpb); // Create a new node;
-    Node<Playlist>* nodePlaylist2 = new Node(rock); // Create a new node;
+    cout << p1.nome << endl;
+    p1.musicas.printList();
+    cout << p2.nome << endl;
+    p2.musicas.printList();
 
-    playlists.insertNode(nodePlaylist1);
-    playlists.insertNode(nodePlaylist2);
-
-
-    cout << "Playlist de MPB" << endl;
-    mpb.musicas.printList();
-    cout << "_____________________________" << endl;
-    cout << "Playlist de Rock" << endl;
-    rock.musicas.printList();
-    cout << "_____________________________" << endl;
-
-    cout << "Lista de playlists" << endl;
-    playlists.printList();
-
+    
+    //Node<Playlist>* nodePlaylist1 = new Node<Playlist>(p1); // Create a new node;
+    //playlists.insertNode(nodePlaylist1);
 
     return 0;
 }
-
-
-
-/*
-    l.printList();
-    l.search(3);
-    l.search(1);
-    l.deleteNode(3);
-    l.printList();
-*/
