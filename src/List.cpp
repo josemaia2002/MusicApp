@@ -24,8 +24,8 @@ List<T>::~List(){
 }
 
 template<class T>
-void List<T>::insertNode(Node<T>* n){
-    //Node* n = new Node(m); // Create a new node;
+void List<T>::insertNode(T param){
+    Node<T>* n = new Node<T>(param); // Create a new node;
 
     // Insert at the beginning if head is pointing to nullptr
     if(head == nullptr) {
@@ -43,11 +43,11 @@ void List<T>::insertNode(Node<T>* n){
 }
 
 template<class T>
-void List<T>::search(int index){
+Node<T>* List<T>::search(int index){
     int i = 0;
     if(index > size){
         cout << "Out of bounds!" << endl;
-        return;
+        //return;
     }
 
     Node<T>* temp = head;
@@ -56,7 +56,8 @@ void List<T>::search(int index){
         temp = temp->next; // Stepping to the next node of the list
         i++;
     }
-    cout << temp->data << " " << endl;
+    
+    return temp;
 }
 
 template<class T>
