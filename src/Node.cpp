@@ -10,7 +10,7 @@ Node<T>::Node(){
 }
 
 template<class T>
-Node<T>::Node(T data){
+Node<T>::Node(const T &data){
     this->data = data;
 
     next = nullptr;

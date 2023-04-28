@@ -73,76 +73,13 @@ int main(){
     l.insertNode(m1);
     l.printList();
 
-
-    List<int> playlists;
-
-    Node<int>* first = nullptr;
-    Node<int>* second = nullptr;
-
-    first = new Node<int>();
-    second = new Node<int>();
-
-    first->data = 13; 
-    first->next = second; 
-
-    second->data = 7; 
-    second->next = nullptr;
-
-    playlists.head = first;
-
-    playlists.printList();
-
-
-
-
-
     List<Playlist> plays;
-
-    Node<Playlist>* firstP = nullptr;
-    Node<Playlist>* secondP = nullptr;
-    Node<Playlist>* thirdP = nullptr;
-
-    firstP = new Node<Playlist>();
-    secondP = new Node<Playlist>();
-    thirdP = new Node<Playlist>();
-
-    firstP->data = p1; 
-    firstP->next = secondP; 
-
-    secondP->data = p2; 
-    secondP->next = thirdP;
-
-    thirdP->data = p3; 
-    thirdP->next = nullptr;
-
-    plays.head = firstP;
-
+    plays.insertNode(p1);
+    plays.insertNode(p2);
+    plays.insertNode(p3);
     plays.printList();
 
-
-
-
-
-
-
-    //playlists.nome = "Sistema";
-
-    //cout << playlists.nome << endl;
-
-    //playlists.insertNode(p1);
-    //playlists.insertNode(p2);
-    //playlists.insertNode(p3);
-
-    //playlists.printList();
-
-
-
     cout << "_________________________________" << endl;
-
-    // playlists.printList();
-    
-    // Node<Playlist>* nodePlaylist1 = new Node<Playlist>(p1); // Create a new node;
-    // playlists.insertNode(nodePlaylist1);
 
     return 0;
 }

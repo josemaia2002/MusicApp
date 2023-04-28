@@ -24,7 +24,7 @@ List<T>::~List(){
 }
 
 template<class T>
-void List<T>::insertNode(T param){
+void List<T>::insertNode(const T &param){
     Node<T>* n = new Node<T>(param); // Create a new node;
 
     // Insert at the beginning if head is pointing to nullptr

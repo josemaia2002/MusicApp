@@ -16,7 +16,7 @@ public:
 public:
     List(); 
     ~List();
-    void insertNode(T param); 
+    void insertNode(const T &param); 
     void printList();
     Node<T>* search(int index);
     void deleteNode(int position); 

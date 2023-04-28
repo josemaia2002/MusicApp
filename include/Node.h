@@ -15,7 +15,7 @@ public:
     Node* next;
 
     Node(); // Default constructor
-    Node(T data); // Specific constructor
+    Node(const T &data); // Specific constructor
 };
 
 #endif
