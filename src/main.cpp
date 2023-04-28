@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 #include "Musica.h"
 #include "Node.h"
 #include "List.h"
@@ -69,13 +70,15 @@ int main(){
     cin >> index;
     cout << p2.musicas.search(index)->data;
 
+    l.insertNode(m1);
+    l.printList();
 
 
-    //playlists.insertNode(p1);
+    playlists.insertNode(p1);
     //playlists.insertNode(p2);
     //playlists.insertNode(p3);
 
-    //playlists.search(2);
+    //playlists.printList();
 
 
 

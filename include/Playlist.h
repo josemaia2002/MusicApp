@@ -15,6 +15,8 @@ public:
 
     Playlist();
     Playlist(string nome);
+
+    friend ostream &operator<<(ostream &output, const Playlist &P);
 };
 
 #endif
