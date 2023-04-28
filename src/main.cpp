@@ -16,7 +16,7 @@ int main(){
     string titulo, artista;
     Musica m1;
     List<Musica> l;
-    List<Playlist> playlists;
+    // List<Playlist> playlists;
     Playlist p1, p2, p3;
 
     cout << "Playlist Name:" << endl;
@@ -74,7 +74,62 @@ int main(){
     l.printList();
 
 
-    playlists.insertNode(p1);
+    List<int> playlists;
+
+    Node<int>* first = nullptr;
+    Node<int>* second = nullptr;
+
+    first = new Node<int>();
+    second = new Node<int>();
+
+    first->data = 13; 
+    first->next = second; 
+
+    second->data = 7; 
+    second->next = nullptr;
+
+    playlists.head = first;
+
+    playlists.printList();
+
+
+
+
+
+    List<Playlist> plays;
+
+    Node<Playlist>* firstP = nullptr;
+    Node<Playlist>* secondP = nullptr;
+    Node<Playlist>* thirdP = nullptr;
+
+    firstP = new Node<Playlist>();
+    secondP = new Node<Playlist>();
+    thirdP = new Node<Playlist>();
+
+    firstP->data = p1; 
+    firstP->next = secondP; 
+
+    secondP->data = p2; 
+    secondP->next = thirdP;
+
+    thirdP->data = p3; 
+    thirdP->next = nullptr;
+
+    plays.head = firstP;
+
+    plays.printList();
+
+
+
+
+
+
+
+    //playlists.nome = "Sistema";
+
+    //cout << playlists.nome << endl;
+
+    //playlists.insertNode(p1);
     //playlists.insertNode(p2);
     //playlists.insertNode(p3);
 

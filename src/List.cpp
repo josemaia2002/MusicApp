@@ -56,7 +56,7 @@ Node<T>* List<T>::search(int index){
         temp = temp->next; // Stepping to the next node of the list
         i++;
     }
-    
+
     return temp;
 }
 
