@@ -11,6 +11,7 @@ List<T>::List(){
     size = 0;
 }
 
+/*
 template<class T>
 List<T>::~List(){
     Node<T>* temp = head;
@@ -22,6 +23,7 @@ List<T>::~List(){
         delete temp2;
     }
 }
+*/
 
 template<class T>
 void List<T>::insertNode(const T &param){

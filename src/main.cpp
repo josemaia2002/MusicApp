@@ -77,6 +77,20 @@ int main(){
     plays.insertNode(p1);
     plays.insertNode(p2);
     plays.insertNode(p3);
+    cout << plays.search(1)->data.nome << endl;
+    cout << plays.search(1)->data.musicas.search(1)->data << endl;
+    cout << plays.search(1)->data.musicas.search(2)->data << endl;
+
+    cout << plays.search(2)->data.nome << endl;
+    cout << plays.search(2)->data.musicas.search(1)->data << endl;
+    cout << plays.search(2)->data.musicas.search(2)->data << endl;
+
+    cout << plays.search(3)->data.nome << endl;
+    cout << plays.search(3)->data.musicas.search(1)->data << endl;
+    cout << plays.search(3)->data.musicas.search(2)->data << endl;
+    
+    cout << "_________________________________" << endl;
+        
     plays.printList();
 
     cout << "_________________________________" << endl;

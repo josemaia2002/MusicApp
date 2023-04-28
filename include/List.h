@@ -15,7 +15,7 @@ public:
     int size;
 public:
     List(); 
-    ~List();
+    //~List();
     void insertNode(const T &param); 
     void printList();
     Node<T>* search(int index);
