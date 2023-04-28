@@ -10,15 +10,51 @@
 
 using namespace std;
 
-// TODO Implement list of playlists
+void menu(){
+    int entrada;
+    cout << "#############################################################################" << endl;
+
+    while(true){
+        cout << "1 - Adicionar músicas" << endl;
+        cout << "2 - Deletar músicas" << endl;
+        cout << "3 - Criar playlist" << endl;
+        cout << "4 - Sair" << endl;
+
+        cin >> entrada;
+
+        switch (entrada) {
+          case 1:
+            cout << "Informe o nome da musica: " << endl;
+            cout << "Informe o nome do artista: " << endl;
+            break;
+          case 2:
+            cout << "Informe o indice da musica a ser deletada: " << endl;
+            break;
+          case 3:
+            cout << "Informe o nome da playlist: " << endl;
+            break;
+          case 4:
+            cout << "I am out" << endl;
+            return;
+            break;
+        }
+    }
+    cout << "#############################################################################" << endl;
+}
+
+// TODO Implement menu
 int main(){
+
+    menu();
+
+
     int index;
     string titulo, artista;
     Musica m1;
     List<Musica> l;
     // List<Playlist> playlists;
     Playlist p1, p2, p3;
-
+/*
     cout << "Playlist Name:" << endl;
     getline(cin, p1.nome);
     for(int i = 0; i < 2; i++){
@@ -90,10 +126,13 @@ int main(){
     cout << plays.search(3)->data.musicas.search(2)->data << endl;
     
     cout << "_________________________________" << endl;
-        
+
     plays.printList();
 
     cout << "_________________________________" << endl;
+
+
+*/
 
     return 0;
 }
