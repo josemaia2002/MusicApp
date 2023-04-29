@@ -208,14 +208,53 @@ void printMenu(){
 
 
             case 2:
-                menu3();
+                do{
+                    menu3();
+                    cin >> choice;
+                    if(choice == 0)
+                        continue;
+                    else if(choice == 1)
+                        cout << "Cadastando uma playlist\n";
+                    else if(choice == 2)
+                        cout << "Removendo uma playlist\n";
+                    else if(choice == 3)
+                        cout << "Listando uma playlist\n";
+                }
+                while(choice != 0);
+                quit = 1;
                 break;
+
+
             case 3:
-                menu4();
+                do{
+                    menu4();
+                    cin >> choice;
+                    quit = choice;
+                    if(choice == 0)
+                        continue;
+                    else if(choice == 1){
+                        cout << "Buscando playlist\n";
+
+                        do{
+                            menu5();
+                            cin >> choice;
+                            if(choice == 0)
+                                continue;
+                            else if(choice == 1)
+                                cout << "Adicionando uma musica\n";
+                            else if(choice == 2)
+                                cout << "Removendo uma musica\n";
+                            else if(choice == 3)
+                                cout << "Listando as musicas\n";
+                        }
+                        while(choice != 0);
+                        quit = 1;
+                    }
+                }
+                while((choice != 0) or (quit != 0));
+                quit = 1;
+                break;
         }
-
-
-
     }
     while((choice != 0) or (quit != 0));
 
