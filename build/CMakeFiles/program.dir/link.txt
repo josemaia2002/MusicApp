@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/program.dir/src/main.cpp.o CMakeFiles/program.dir/src/Node.cpp.o CMakeFiles/program.dir/src/List.cpp.o CMakeFiles/program.dir/src/Playlist.cpp.o CMakeFiles/program.dir/src/Musica.cpp.o -o program 

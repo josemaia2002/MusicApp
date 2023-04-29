@@ -1,0 +1,3 @@
+/home/maia/Documents/LPI/MusicApp/build/CMakeFiles/program.dir
+/home/maia/Documents/LPI/MusicApp/build/CMakeFiles/edit_cache.dir
+/home/maia/Documents/LPI/MusicApp/build/CMakeFiles/rebuild_cache.dir

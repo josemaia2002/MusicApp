@@ -131,7 +131,7 @@ void Printamenu(){
 }
 
 
-void printMenu(){
+void printMenu2(){
     int opcao;
     menu1();
 
@@ -169,19 +169,56 @@ void printMenu(){
     }
 }
 
-void printMenu2(){
-    int selection, submenu;
-    bool quit = false;
-    while(quit != true) {
+void printMenu(){
+    int choice, quit = 1;
+
+    do{
         menu1();
-        cin >> selection;
+        cin >> choice;
+        quit = choice;
 
-        
 
-        while(subMenu) {
-         // display sub menu
-       }
+
+
+        switch(choice){
+            case 0:
+                if(quit == 0)
+                    return;
+                else
+                    break;
+
+
+            case 1:
+                do{
+                    menu2();
+                    cin >> choice;
+                    if(choice == 0)
+                        continue;
+                    else if(choice == 1)
+                        cout << "Cadastando musicas\n";
+                    else if(choice == 2)
+                        cout << "Removendo musicas\n";
+                    else if(choice == 3)
+                        cout << "Listando musicas\n";
+                }
+                while(choice != 0);
+                quit = 1;
+                break;
+
+
+
+            case 2:
+                menu3();
+                break;
+            case 3:
+                menu4();
+        }
+
+
+
     }
+    while((choice != 0) or (quit != 0));
+
 }
 
 
@@ -195,7 +232,7 @@ int main(){
     Playlist p1, p2, p3;
 
     // Printamenu();
-    printMenu2();
+    printMenu();
 
 
 
