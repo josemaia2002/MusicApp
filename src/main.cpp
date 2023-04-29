@@ -65,8 +65,15 @@ void removerMusica(List<Musica>& L){
     L.deleteNode(position);
 }
 
+void cadastrarPlaylist(List<Playlist>& P){
+    Playlist play;
+    getline(cin, play.nome);
+    getline(cin, play.nome);
+    P.insertNode(play);
+}
 
-void printMenu(List<Musica>& L){
+
+void printMenu(List<Musica>& L, List<Playlist>& P){
 
     int choice, quit = 1;
 
@@ -90,8 +97,6 @@ void printMenu(List<Musica>& L){
                     else if(choice == 1){
                         cadastrarMusica(L);
                     }   
-
-
                     else if(choice == 2){
                         cout << "Escolha uma musica para ser removida\n";
                         removerMusica(L);
@@ -110,11 +115,13 @@ void printMenu(List<Musica>& L){
                     if(choice == 0)
                         continue;
                     else if(choice == 1)
-                        cout << "Cadastando uma playlist\n";
+                        cadastrarPlaylist(P);
                     else if(choice == 2)
                         cout << "Removendo uma playlist\n";
-                    else if(choice == 3)
-                        cout << "Listando uma playlist\n";
+                    else if(choice == 3){
+                        for(int i = 1; i <= P.size; i++)
+                            cout << P.search(i)->data.nome << endl;
+                    }
                 }
                 while(choice != 0);
                 quit = 1;
@@ -159,20 +166,46 @@ void printMenu(List<Musica>& L){
 
 
 
-// TODO Integrate menu with the system
+// TODO Implement Playlist function
 int main(){
     int index;
     string titulo, artista;
     Musica m1;
     List<Musica> l; // Todas as musicas do sistema
-    // List<Playlist> playlists;
+    List<Playlist> playlists;
     Playlist p1, p2, p3;
 
-    printMenu(l);
+    printMenu(l, playlists);
 
-    cout << "Testando" << endl;
-    cout << "List<Musica> l: " << endl;
-    l.printList();
+    //cout << playlists.size;
+
+
+    //cout << playlists.search(1)->data.nome << endl;
+    //cout << playlists.search(2)->data.nome << endl;
+    //cout << playlists.search(3)->data.nome << endl;
+
+
+/*
+    cadastrarPlaylist(playlists);
+    cadastrarPlaylist(playlists);
+    cadastrarPlaylist(playlists);
+
+    cout << playlists.search(1)->data.nome << endl;
+    // cout << playlists.search(1)->data.musicas.search(1)->data << endl;
+    // cout << playlists.search(1)->data.musicas.search(2)->data << endl;
+
+    cout << playlists.search(2)->data.nome << endl;
+    // cout << playlists.search(2)->data.musicas.search(1)->data << endl;
+    // cout << playlists.search(2)->data.musicas.search(2)->data << endl;
+
+    cout << playlists.search(3)->data.nome << endl;
+
+*/
+
+
+    //cout << "Testando" << endl;
+    //cout << "List<Musica> l: " << endl;
+    //l.printList();
 
 
 
