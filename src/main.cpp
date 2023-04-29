@@ -48,7 +48,19 @@ void menu5(){
     cout << "0 - voltar" << endl;
 }
 
-void printMenu(){
+void cadastrarMusica(List<Musica>& L){
+    Musica inSong;
+    string titulo, artista;
+    getline(cin, titulo);
+    getline(cin, titulo);
+    getline(cin, artista);
+    inSong = Musica(titulo, artista); 
+    L.insertNode(inSong);
+}
+
+
+void printMenu(List<Musica>& L){
+
     int choice, quit = 1;
 
     do{
@@ -68,12 +80,19 @@ void printMenu(){
                     cin >> choice;
                     if(choice == 0)
                         continue;
-                    else if(choice == 1)
-                        cout << "Cadastando musicas\n";
+
+
+                    else if(choice == 1){
+                        cadastrarMusica(L);
+                    }   
+
+
+
                     else if(choice == 2)
                         cout << "Removendo musicas\n";
                     else if(choice == 3)
                         cout << "Listando musicas\n";
+                        L.printList();
                 }
                 while(choice != 0);
                 quit = 1;
@@ -129,16 +148,26 @@ void printMenu(){
 }
 
 
+
+
+
+
+
 // TODO Integrate menu with the system
 int main(){
     int index;
     string titulo, artista;
     Musica m1;
-    List<Musica> l;
+    List<Musica> l; // Todas as musicas do sistema
     // List<Playlist> playlists;
     Playlist p1, p2, p3;
 
-    printMenu();
+    printMenu(l);
+
+    cout << "Testando" << endl;
+    cout << "List<Musica> l: " << endl;
+    l.printList();
+
 
 
 
