@@ -58,6 +58,13 @@ void cadastrarMusica(List<Musica>& L){
     L.insertNode(inSong);
 }
 
+void removerMusica(List<Musica>& L){
+    int position;
+    cin >> position;
+    
+    L.deleteNode(position);
+}
+
 
 void printMenu(List<Musica>& L){
 
@@ -80,16 +87,15 @@ void printMenu(List<Musica>& L){
                     cin >> choice;
                     if(choice == 0)
                         continue;
-
-
                     else if(choice == 1){
                         cadastrarMusica(L);
                     }   
 
 
-
-                    else if(choice == 2)
-                        cout << "Removendo musicas\n";
+                    else if(choice == 2){
+                        cout << "Escolha uma musica para ser removida\n";
+                        removerMusica(L);
+                    }
                     else if(choice == 3)
                         cout << "Listando musicas\n";
                         L.printList();
