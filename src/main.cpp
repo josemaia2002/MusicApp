@@ -10,50 +10,195 @@
 
 using namespace std;
 
-void menu(){
-    int entrada;
-    cout << "#############################################################################" << endl;
+void menu1(){
+    cout << "Digite o numero de acordo com a opção que queira realizar:" << endl;
+    cout << "1 - Gerenciar Musicas" << endl;
+    cout << "2 - Gerenciar Playlists" << endl;
+    cout << "3 - Gerenciar Musicas em uma playlist" << endl;
+    cout << "0 - Sair" << endl;
+}
+
+void menu2(){
+    cout << "Digite o numero de acordo com a opção que queira realizar:" << endl;
+    cout << "1 - Cadastrar uma músicas" << endl;
+    cout << "2 - Remover uma músicas" << endl;
+    cout << "3 - Listar as músicas" << endl;
+    cout << "0 - voltar" << endl;
+}
+
+void menu3(){
+    cout << "Digite o numero de acordo com a opção que queira realizar:" << endl;
+    cout << "1 - Cadastrar uma playlist" << endl;
+    cout << "2 - Remover uma playlist" << endl;
+    cout << "3 - Listar as playlist" << endl;
+    cout << "0 - voltar" << endl;
+}
+
+void menu4(){
+    cout << "Digite o numero de acordo com a opção que queira realizar:" << endl;
+    cout << "1 - Buscar uma playlist" << endl;
+    cout << "0 - voltar" << endl;
+}
+
+void menu5(){
+    cout << "Digite o numero de acordo com a opção que queira realizar:" << endl;
+    cout << "1 - Adicionar uma música" << endl;
+    cout << "2 - Remover uma música" << endl;
+    cout << "3 - Listar as músicas" << endl;
+    cout << "0 - voltar" << endl;
+}
+
+void Printamenu(){
+  
+    cout << "-------------------------------------------------------------" << endl;
+    cout << "------------Bem vindo ao Aplicativo de musicas---------------" << endl;
+    cout << "-------------------------------------------------------------" << endl;
+
+
+  while(true){
+    int aux1;
+
+    menu1();
+
+    cin >> aux1;
+    if(aux1==1){
+      int aux2;
+
+      menu2();
+
+      cin >> aux2;
+      switch(aux2) {
+      case 1:
+        // função para Cadastrar uma músicas
+        break;
+      case 2:
+        // função para  Remover uma músicas
+        break;
+      case 3:
+        // função para Listar as músicas.
+        break;
+      case 0:
+        menu1();
+        break;
+      }
+    }
+
+    if(aux1==2){
+      int aux2;
+
+      menu3();
+
+      cin >> aux2;
+
+      switch(aux2) {
+      case 1:
+        // função para Cadastrar uma playlist
+        break;
+      case 2:
+        // função para  Remover uma playlist
+        break;
+      case 3:
+        // função para Listar as playlist
+        break;
+      case 0:
+        menu1();
+        break;        
+      }
+    }
+    
+    if(aux1==3){
+      int aux2;
+
+      menu4();
+
+      switch(aux2) {
+      case 1:
+        menu5();
+        break;
+      case 0:
+        menu1();
+        break;
+      }
+    }
+    
+    if(aux1==0){
+      break;
+    }
+    if((aux1 != 0) and (aux1 != 1) and (aux1 != 2) and (aux1 != 3)){
+      cout << "Digite uma opção valida." << endl;
+    }
+  }
+}
+
+
+void printMenu(){
+    int opcao;
+    menu1();
 
     while(true){
-        cout << "1 - Adicionar músicas" << endl;
-        cout << "2 - Deletar músicas" << endl;
-        cout << "3 - Criar playlist" << endl;
-        cout << "4 - Sair" << endl;
-
-        cin >> entrada;
-
-        switch (entrada) {
-          case 1:
-            cout << "Informe o nome da musica: " << endl;
-            cout << "Informe o nome do artista: " << endl;
-            break;
-          case 2:
-            cout << "Informe o indice da musica a ser deletada: " << endl;
-            break;
-          case 3:
-            cout << "Informe o nome da playlist: " << endl;
-            break;
-          case 4:
-            cout << "I am out" << endl;
+        cin >> opcao;
+        if(opcao == 0){
             return;
-            break;
+        }
+
+        if(opcao == 1){
+            menu2();
+            cin >> opcao;
+            if(opcao == 0)
+                menu1();
+        }
+
+        if(opcao == 2){
+            menu3();
+            cin >> opcao;
+            if(opcao == 0)
+                menu1();
+        }
+
+        if(opcao == 3){
+            menu4();
+            cin >> opcao;
+            if(opcao == 0)
+                menu1();
+            else if(opcao == 1)
+                menu5();
+                cin >> opcao;
+                if(opcao == 0)
+                    menu4();
         }
     }
-    cout << "#############################################################################" << endl;
 }
+
+void printMenu2(){
+    int selection, submenu;
+    bool quit = false;
+    while(quit != true) {
+        menu1();
+        cin >> selection;
+
+        
+
+        while(subMenu) {
+         // display sub menu
+       }
+    }
+}
+
 
 // TODO Implement menu
 int main(){
-
-    menu();
-
-
     int index;
     string titulo, artista;
     Musica m1;
     List<Musica> l;
     // List<Playlist> playlists;
     Playlist p1, p2, p3;
+
+    // Printamenu();
+    printMenu2();
+
+
+
 /*
     cout << "Playlist Name:" << endl;
     getline(cin, p1.nome);
