@@ -72,6 +72,11 @@ void cadastrarPlaylist(List<Playlist>& P){
     P.insertNode(play);
 }
 
+void listarPlaylists(List<Playlist>& P){
+    for(int i = 1; i <= P.size; i++)
+        cout << P.search(i)->data.nome << endl;
+}
+
 
 void printMenu(List<Musica>& L, List<Playlist>& P){
 
@@ -119,8 +124,7 @@ void printMenu(List<Musica>& L, List<Playlist>& P){
                     else if(choice == 2)
                         cout << "Removendo uma playlist\n";
                     else if(choice == 3){
-                        for(int i = 1; i <= P.size; i++)
-                            cout << P.search(i)->data.nome << endl;
+                        listarPlaylists(P);
                     }
                 }
                 while(choice != 0);
