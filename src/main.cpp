@@ -48,127 +48,6 @@ void menu5(){
     cout << "0 - voltar" << endl;
 }
 
-void Printamenu(){
-  
-    cout << "-------------------------------------------------------------" << endl;
-    cout << "------------Bem vindo ao Aplicativo de musicas---------------" << endl;
-    cout << "-------------------------------------------------------------" << endl;
-
-
-  while(true){
-    int aux1;
-
-    menu1();
-
-    cin >> aux1;
-    if(aux1==1){
-      int aux2;
-
-      menu2();
-
-      cin >> aux2;
-      switch(aux2) {
-      case 1:
-        // função para Cadastrar uma músicas
-        break;
-      case 2:
-        // função para  Remover uma músicas
-        break;
-      case 3:
-        // função para Listar as músicas.
-        break;
-      case 0:
-        menu1();
-        break;
-      }
-    }
-
-    if(aux1==2){
-      int aux2;
-
-      menu3();
-
-      cin >> aux2;
-
-      switch(aux2) {
-      case 1:
-        // função para Cadastrar uma playlist
-        break;
-      case 2:
-        // função para  Remover uma playlist
-        break;
-      case 3:
-        // função para Listar as playlist
-        break;
-      case 0:
-        menu1();
-        break;        
-      }
-    }
-    
-    if(aux1==3){
-      int aux2;
-
-      menu4();
-
-      switch(aux2) {
-      case 1:
-        menu5();
-        break;
-      case 0:
-        menu1();
-        break;
-      }
-    }
-    
-    if(aux1==0){
-      break;
-    }
-    if((aux1 != 0) and (aux1 != 1) and (aux1 != 2) and (aux1 != 3)){
-      cout << "Digite uma opção valida." << endl;
-    }
-  }
-}
-
-
-void printMenu2(){
-    int opcao;
-    menu1();
-
-    while(true){
-        cin >> opcao;
-        if(opcao == 0){
-            return;
-        }
-
-        if(opcao == 1){
-            menu2();
-            cin >> opcao;
-            if(opcao == 0)
-                menu1();
-        }
-
-        if(opcao == 2){
-            menu3();
-            cin >> opcao;
-            if(opcao == 0)
-                menu1();
-        }
-
-        if(opcao == 3){
-            menu4();
-            cin >> opcao;
-            if(opcao == 0)
-                menu1();
-            else if(opcao == 1)
-                menu5();
-                cin >> opcao;
-                if(opcao == 0)
-                    menu4();
-        }
-    }
-}
-
 void printMenu(){
     int choice, quit = 1;
 
@@ -177,17 +56,12 @@ void printMenu(){
         cin >> choice;
         quit = choice;
 
-
-
-
         switch(choice){
             case 0:
                 if(quit == 0)
                     return;
                 else
                     break;
-
-
             case 1:
                 do{
                     menu2();
@@ -204,9 +78,6 @@ void printMenu(){
                 while(choice != 0);
                 quit = 1;
                 break;
-
-
-
             case 2:
                 do{
                     menu3();
@@ -223,8 +94,6 @@ void printMenu(){
                 while(choice != 0);
                 quit = 1;
                 break;
-
-
             case 3:
                 do{
                     menu4();
@@ -257,11 +126,10 @@ void printMenu(){
         }
     }
     while((choice != 0) or (quit != 0));
-
 }
 
 
-// TODO Implement menu
+// TODO Integrate menu with the system
 int main(){
     int index;
     string titulo, artista;
@@ -270,7 +138,6 @@ int main(){
     // List<Playlist> playlists;
     Playlist p1, p2, p3;
 
-    // Printamenu();
     printMenu();
 
 
