@@ -84,12 +84,39 @@ void listarPlaylists(List<Playlist>& P){
         cout << P.search(i)->data.nome << endl;
 }
 
+/*
+Playlist buscarPlaylists(List<Playlist>& P){
+    int position;
+    cin >> position;
+
+    return P.search(position)->data;
+}
+*/
 
 
+void addToPlaylist(List<Playlist>& P, List<Musica>& L, int positionPlaylist){
+    int positionMusica;
+    cin >> positionMusica;
+
+    P.search(positionPlaylist)->data.musicas.insertNode(L.search(positionMusica)->data);
+
+    //P.musicas.insertNode(L.search(positionMusica)->data);
+
+/*
+    //int positionPlaylist;
+    int positionMusica;
+    //cin >> positionPlaylist;
+    cin >> positionMusica;
+    // L.search(position)->data;
+    P.search(positionPlaylist)->data.musicas.insertNode(L.search(positionMusica)->data);
+*/
+
+}
 
 void printMenu(List<Musica>& L, List<Playlist>& P){
-
+    Playlist play;
     int choice, quit = 1;
+    int positionPlaylist;
 
     do{
         menu1();
@@ -131,12 +158,7 @@ void printMenu(List<Musica>& L, List<Playlist>& P){
                     else if(choice == 1)
                         cadastrarPlaylist(P);
                     else if(choice == 2)
-
-
-
                         removerPlaylist(P);
-
-
                     else if(choice == 3){
                         listarPlaylists(P);
                     }
@@ -153,18 +175,51 @@ void printMenu(List<Musica>& L, List<Playlist>& P){
                         continue;
                     else if(choice == 1){
                         cout << "Buscando playlist\n";
-
+                        // play = buscarPlaylists(P);
+                        cin >> positionPlaylist;
+                        
                         do{
                             menu5();
                             cin >> choice;
                             if(choice == 0)
                                 continue;
                             else if(choice == 1)
-                                cout << "Adicionando uma musica\n";
+                                addToPlaylist(P, L, positionPlaylist);
                             else if(choice == 2)
                                 cout << "Removendo uma musica\n";
-                            else if(choice == 3)
-                                cout << "Listando as musicas\n";
+
+
+                            else if(choice == 3){
+                                int tam = P.search(positionPlaylist)->data.musicas.size;
+
+                                P.search(positionPlaylist)->data.musicas.printList();
+
+
+
+
+                                /*
+                                for(int i = 1; i <= tam; i++){
+                                    cout << P.search(positionPlaylist)->data.musicas.printList();
+                                }
+                                */
+
+                                
+
+                                // play.musicas.printList();
+                                // cout << play.nome << endl;
+
+
+                            /*
+                                for(int i = 1; i <= play.musicas.size; i++){
+                                    cout << play.musicas.search(i)->data << endl;
+                                }
+
+                            */
+
+                            }
+
+
+
                         }
                         while(choice != 0);
                         quit = 1;
@@ -194,6 +249,13 @@ int main(){
     Playlist p1, p2, p3;
 
     printMenu(l, playlists);
+
+    // cadastrarPlaylist(playlists);
+    // cadastrarPlaylist(playlists);
+
+    //cout << buscarPlaylists(playlists)->data.nome;
+
+
 
     //cout << playlists.size;
 
