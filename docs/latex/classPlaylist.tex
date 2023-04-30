@@ -1,0 +1,116 @@
+\doxysection{Playlist Class Reference}
+\hypertarget{classPlaylist}{}\label{classPlaylist}\index{Playlist@{Playlist}}
+
+
+Represents a playlist.  
+
+
+
+
+{\ttfamily \#include $<$Playlist.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlaylist_aef38d55e42995be147977726350f3ada}{Playlist}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{classPlaylist}{Playlist}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlaylist_aa4b4914ac8e101589ed5ffba330b7cf5}{Playlist}} (string \mbox{\hyperlink{classPlaylist_a2400e24df7616fc88ac4981e47fa1118}{nome}})
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{classPlaylist}{Playlist} with a specific name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classPlaylist_a2400e24df7616fc88ac4981e47fa1118}{nome}}
+\begin{DoxyCompactList}\small\item\em The playlist name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classMusica}{Musica}} $>$ \mbox{\hyperlink{classPlaylist_a93b9739351a142f30d2924bb997afa63}{musicas}}
+\begin{DoxyCompactList}\small\item\em The list of songs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{classPlaylist_abb6dfe968be28eb31f5d40df2f8a7704}{operator$<$$<$}} (ostream \&output, const \mbox{\hyperlink{classPlaylist}{Playlist}} \&P)
+\begin{DoxyCompactList}\small\item\em Overloads the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a playlist. 
+
+This is a class that represents a playlist that contains specific songs and the playlist name. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPlaylist_aef38d55e42995be147977726350f3ada}\label{classPlaylist_aef38d55e42995be147977726350f3ada} 
+\index{Playlist@{Playlist}!Playlist@{Playlist}}
+\index{Playlist@{Playlist}!Playlist@{Playlist}}
+\doxysubsubsection{\texorpdfstring{Playlist()}{Playlist()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Playlist\+::\+Playlist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{classPlaylist}{Playlist}. 
+
+Creates a new \doxylink{classPlaylist}{Playlist} and sets its name to an empty string. \Hypertarget{classPlaylist_aa4b4914ac8e101589ed5ffba330b7cf5}\label{classPlaylist_aa4b4914ac8e101589ed5ffba330b7cf5} 
+\index{Playlist@{Playlist}!Playlist@{Playlist}}
+\index{Playlist@{Playlist}!Playlist@{Playlist}}
+\doxysubsubsection{\texorpdfstring{Playlist()}{Playlist()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Playlist\+::\+Playlist (\begin{DoxyParamCaption}\item[{string}]{nome }\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{classPlaylist}{Playlist} with a specific name. 
+
+Creates a new \doxylink{classPlaylist}{Playlist} and sets its name to the received parameter.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & The name that\textquotesingle{}s going to be assigned to the new \doxylink{classPlaylist}{Playlist}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classPlaylist_abb6dfe968be28eb31f5d40df2f8a7704}\label{classPlaylist_abb6dfe968be28eb31f5d40df2f8a7704} 
+\index{Playlist@{Playlist}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Playlist@{Playlist}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{output,  }\item[{const \mbox{\hyperlink{classPlaylist}{Playlist}} \&}]{P }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overloads the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator. 
+
+Specifies the behavior of the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator when dealing with a \doxylink{classPlaylist}{Playlist}. It is going to access the {\ttfamily nome} field of the \doxylink{classPlaylist}{Playlist} and print it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & The destination of the data. \\
+\hline
+{\em P} & The \doxylink{classPlaylist}{Playlist} which is being accessed. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classPlaylist_a93b9739351a142f30d2924bb997afa63}\label{classPlaylist_a93b9739351a142f30d2924bb997afa63} 
+\index{Playlist@{Playlist}!musicas@{musicas}}
+\index{musicas@{musicas}!Playlist@{Playlist}}
+\doxysubsubsection{\texorpdfstring{musicas}{musicas}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classList}{List}}$<$\mbox{\hyperlink{classMusica}{Musica}}$>$ Playlist\+::musicas}
+
+
+
+The list of songs. 
+
+Represents the list of songs that the playlist contains. \Hypertarget{classPlaylist_a2400e24df7616fc88ac4981e47fa1118}\label{classPlaylist_a2400e24df7616fc88ac4981e47fa1118} 
+\index{Playlist@{Playlist}!nome@{nome}}
+\index{nome@{nome}!Playlist@{Playlist}}
+\doxysubsubsection{\texorpdfstring{nome}{nome}}
+{\footnotesize\ttfamily string Playlist\+::nome}
+
+
+
+The playlist name. 
+
+Represents the name of the playlist. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Playlist_8h}{Playlist.\+h}}\item 
+src/\mbox{\hyperlink{Playlist_8cpp}{Playlist.\+cpp}}\end{DoxyCompactItemize}

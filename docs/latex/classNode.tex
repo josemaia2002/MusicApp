@@ -1,0 +1,95 @@
+\doxysection{Node\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classNode}{}\label{classNode}\index{Node$<$ T $>$@{Node$<$ T $>$}}
+
+
+Represents a node.  
+
+
+
+
+{\ttfamily \#include $<$Node.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNode_a0ac1d44cfe588be564acf25485029bd8}{Node}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{classNode}{Node}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNode_af9afc55b1faef5670b0a46277c1b60e5}{Node}} (const T \&\mbox{\hyperlink{classNode_ac450c71a8677a38d306361f9ced518d3}{data}})
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{classNode}{Node}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{classNode_ac450c71a8677a38d306361f9ced518d3}{data}}
+\begin{DoxyCompactList}\small\item\em The node\textquotesingle{}s data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNode}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classNode_ac1c0563946c59c36bddde431b4adb00b}{next}}
+\begin{DoxyCompactList}\small\item\em The node\textquotesingle{}s pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Node$<$ T $>$}
+Represents a node. 
+
+This is a template class that represents a generic node of a linked list. It contains the data of the node and the link to the next node. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classNode_a0ac1d44cfe588be564acf25485029bd8}\label{classNode_a0ac1d44cfe588be564acf25485029bd8} 
+\index{Node$<$ T $>$@{Node$<$ T $>$}!Node@{Node}}
+\index{Node@{Node}!Node$<$ T $>$@{Node$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classNode}{Node}}$<$ T $>$\mbox{\hyperlink{classNode}{\+::\+Node}}}
+
+
+
+Creates a new \doxylink{classNode}{Node}. 
+
+Creates a new \doxylink{classNode}{Node} and sets it to point to NULL. \Hypertarget{classNode_af9afc55b1faef5670b0a46277c1b60e5}\label{classNode_af9afc55b1faef5670b0a46277c1b60e5} 
+\index{Node$<$ T $>$@{Node$<$ T $>$}!Node@{Node}}
+\index{Node@{Node}!Node$<$ T $>$@{Node$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classNode}{Node}}$<$ T $>$\mbox{\hyperlink{classNode}{\+::\+Node}} (\begin{DoxyParamCaption}\item[{const T \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{classNode}{Node}. 
+
+Creates a new \doxylink{classNode}{Node} and sets its data field with the generic parameter and makes it points to NULL.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The node\textquotesingle{}s value. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classNode_ac450c71a8677a38d306361f9ced518d3}\label{classNode_ac450c71a8677a38d306361f9ced518d3} 
+\index{Node$<$ T $>$@{Node$<$ T $>$}!data@{data}}
+\index{data@{data}!Node$<$ T $>$@{Node$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \mbox{\hyperlink{classNode}{Node}}$<$ T $>$\+::data}
+
+
+
+The node\textquotesingle{}s data. 
+
+Represents the node\textquotesingle{}s data. It is set by the constructor and may contain any data type, as long as it is specified. \Hypertarget{classNode_ac1c0563946c59c36bddde431b4adb00b}\label{classNode_ac1c0563946c59c36bddde431b4adb00b} 
+\index{Node$<$ T $>$@{Node$<$ T $>$}!next@{next}}
+\index{next@{next}!Node$<$ T $>$@{Node$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classNode}{Node}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classNode}{Node}}$<$ T $>$\+::next}
+
+
+
+The node\textquotesingle{}s pointer. 
+
+Represents the node\textquotesingle{}s pointer to the next node. It is used to link the elements of a linked list, with each node pointing to the next one. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Node_8h}{Node.\+h}}\item 
+src/\mbox{\hyperlink{Node_8cpp}{Node.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,129 @@
+\doxysection{src/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \"{}Musica.\+h\"{}}\newline
+{\ttfamily \#include \"{}Node.\+h\"{}}\newline
+{\ttfamily \#include \"{}List.\+h\"{}}\newline
+{\ttfamily \#include \"{}Playlist.\+h\"{}}\newline
+{\ttfamily \#include \"{}Node.\+cpp\"{}}\newline
+{\ttfamily \#include \"{}List.\+cpp\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_a49fa1336abeb5443d70a08f235af8e61}{menu1}} ()
+\item 
+void \mbox{\hyperlink{main_8cpp_a850dcd293fa06f0b488371b86313ee63}{menu2}} ()
+\item 
+void \mbox{\hyperlink{main_8cpp_a2cf6208796e40e0eb9a32ff41e88635b}{menu3}} ()
+\item 
+void \mbox{\hyperlink{main_8cpp_aad55236a7fec211df753b85472aa4339}{menu4}} ()
+\item 
+void \mbox{\hyperlink{main_8cpp_abe1e7fcbc56e7f80e1afdc297956b102}{menu5}} ()
+\item 
+void \mbox{\hyperlink{main_8cpp_aa54bce7f5f63cc286062a00b39c7cbfe}{cadastrar\+Musica}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classMusica}{Musica}} $>$ \&L)
+\item 
+void \mbox{\hyperlink{main_8cpp_ad5f248b16ca393787e74132d81786c32}{remover\+Musica}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classMusica}{Musica}} $>$ \&L)
+\item 
+void \mbox{\hyperlink{main_8cpp_a77045fbd6b1fd9cab45ffe8c954fabea}{cadastrar\+Playlist}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&P)
+\item 
+void \mbox{\hyperlink{main_8cpp_a6015c1e8340315b3dee0ac5d8134a65a}{remover\+Playlist}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&P)
+\item 
+void \mbox{\hyperlink{main_8cpp_abddf18c4864cf0d6c9c8268a10cf0334}{listar\+Playlists}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&P)
+\item 
+void \mbox{\hyperlink{main_8cpp_a4627f48daaa82529ac32ca5fb398ce85}{add\+To\+Playlist}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&P, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classMusica}{Musica}} $>$ \&L, int position\+Playlist)
+\item 
+void \mbox{\hyperlink{main_8cpp_a5c3316bad44832b05442dd5c4895ae70}{remove\+From\+Playlist}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&P, int position\+Playlist)
+\item 
+void \mbox{\hyperlink{main_8cpp_a0b6a03d7a5aa65247516b24739429acc}{print\+Menu}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classMusica}{Musica}} $>$ \&L, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&P)
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a4627f48daaa82529ac32ca5fb398ce85}\label{main_8cpp_a4627f48daaa82529ac32ca5fb398ce85} 
+\index{main.cpp@{main.cpp}!addToPlaylist@{addToPlaylist}}
+\index{addToPlaylist@{addToPlaylist}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{addToPlaylist()}{addToPlaylist()}}
+{\footnotesize\ttfamily void add\+To\+Playlist (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&}]{P,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classMusica}{Musica}} $>$ \&}]{L,  }\item[{int}]{position\+Playlist }\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_aa54bce7f5f63cc286062a00b39c7cbfe}\label{main_8cpp_aa54bce7f5f63cc286062a00b39c7cbfe} 
+\index{main.cpp@{main.cpp}!cadastrarMusica@{cadastrarMusica}}
+\index{cadastrarMusica@{cadastrarMusica}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{cadastrarMusica()}{cadastrarMusica()}}
+{\footnotesize\ttfamily void cadastrar\+Musica (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classMusica}{Musica}} $>$ \&}]{L }\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a77045fbd6b1fd9cab45ffe8c954fabea}\label{main_8cpp_a77045fbd6b1fd9cab45ffe8c954fabea} 
+\index{main.cpp@{main.cpp}!cadastrarPlaylist@{cadastrarPlaylist}}
+\index{cadastrarPlaylist@{cadastrarPlaylist}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{cadastrarPlaylist()}{cadastrarPlaylist()}}
+{\footnotesize\ttfamily void cadastrar\+Playlist (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&}]{P }\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_abddf18c4864cf0d6c9c8268a10cf0334}\label{main_8cpp_abddf18c4864cf0d6c9c8268a10cf0334} 
+\index{main.cpp@{main.cpp}!listarPlaylists@{listarPlaylists}}
+\index{listarPlaylists@{listarPlaylists}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{listarPlaylists()}{listarPlaylists()}}
+{\footnotesize\ttfamily void listar\+Playlists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&}]{P }\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a49fa1336abeb5443d70a08f235af8e61}\label{main_8cpp_a49fa1336abeb5443d70a08f235af8e61} 
+\index{main.cpp@{main.cpp}!menu1@{menu1}}
+\index{menu1@{menu1}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{menu1()}{menu1()}}
+{\footnotesize\ttfamily void menu1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a850dcd293fa06f0b488371b86313ee63}\label{main_8cpp_a850dcd293fa06f0b488371b86313ee63} 
+\index{main.cpp@{main.cpp}!menu2@{menu2}}
+\index{menu2@{menu2}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{menu2()}{menu2()}}
+{\footnotesize\ttfamily void menu2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a2cf6208796e40e0eb9a32ff41e88635b}\label{main_8cpp_a2cf6208796e40e0eb9a32ff41e88635b} 
+\index{main.cpp@{main.cpp}!menu3@{menu3}}
+\index{menu3@{menu3}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{menu3()}{menu3()}}
+{\footnotesize\ttfamily void menu3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_aad55236a7fec211df753b85472aa4339}\label{main_8cpp_aad55236a7fec211df753b85472aa4339} 
+\index{main.cpp@{main.cpp}!menu4@{menu4}}
+\index{menu4@{menu4}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{menu4()}{menu4()}}
+{\footnotesize\ttfamily void menu4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_abe1e7fcbc56e7f80e1afdc297956b102}\label{main_8cpp_abe1e7fcbc56e7f80e1afdc297956b102} 
+\index{main.cpp@{main.cpp}!menu5@{menu5}}
+\index{menu5@{menu5}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{menu5()}{menu5()}}
+{\footnotesize\ttfamily void menu5 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a0b6a03d7a5aa65247516b24739429acc}\label{main_8cpp_a0b6a03d7a5aa65247516b24739429acc} 
+\index{main.cpp@{main.cpp}!printMenu@{printMenu}}
+\index{printMenu@{printMenu}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{printMenu()}{printMenu()}}
+{\footnotesize\ttfamily void print\+Menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classMusica}{Musica}} $>$ \&}]{L,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&}]{P }\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a5c3316bad44832b05442dd5c4895ae70}\label{main_8cpp_a5c3316bad44832b05442dd5c4895ae70} 
+\index{main.cpp@{main.cpp}!removeFromPlaylist@{removeFromPlaylist}}
+\index{removeFromPlaylist@{removeFromPlaylist}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{removeFromPlaylist()}{removeFromPlaylist()}}
+{\footnotesize\ttfamily void remove\+From\+Playlist (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&}]{P,  }\item[{int}]{position\+Playlist }\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_ad5f248b16ca393787e74132d81786c32}\label{main_8cpp_ad5f248b16ca393787e74132d81786c32} 
+\index{main.cpp@{main.cpp}!removerMusica@{removerMusica}}
+\index{removerMusica@{removerMusica}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{removerMusica()}{removerMusica()}}
+{\footnotesize\ttfamily void remover\+Musica (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classMusica}{Musica}} $>$ \&}]{L }\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a6015c1e8340315b3dee0ac5d8134a65a}\label{main_8cpp_a6015c1e8340315b3dee0ac5d8134a65a} 
+\index{main.cpp@{main.cpp}!removerPlaylist@{removerPlaylist}}
+\index{removerPlaylist@{removerPlaylist}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{removerPlaylist()}{removerPlaylist()}}
+{\footnotesize\ttfamily void remover\+Playlist (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&}]{P }\end{DoxyParamCaption})}
+

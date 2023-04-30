@@ -1,0 +1,38 @@
+\doxysection{List.\+h}
+\hypertarget{List_8h_source}{}\label{List_8h_source}\index{include/List.h@{include/List.h}}
+\mbox{\hyperlink{List_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Node_8h}{Node.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ LIST\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ LIST\_H}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classList}{List}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:\ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{classNode}{Node<T>}}*\ \mbox{\hyperlink{classList_ae1a61bf8478bde5c20ff70e7c483e28b}{head}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classNode}{Node<T>}}*\ \mbox{\hyperlink{classList_ae9ac5836a3c8b4b4953030082b014425}{tail}};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classList_a9bcdc47851f17550669b03ef3fd3f6b9}{size}};}
+\DoxyCodeLine{00044\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{classList_a5c5e27671b21b3815d4e25b953c69454}{List}}();\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classList_a695092a007b977731c0f480cb1e588db}{insertNode}}(\textcolor{keyword}{const}\ T\ \&value);\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classList_abe4eff91f3ca33aeddaf70aae6e15a5c}{printList}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{classNode}{Node<T>}}*\ \mbox{\hyperlink{classList_a0ed0f4ab03fa00e460160ae4a446d9e5}{search}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classList_afc1d36d710da2f075cc14f12179ba1c2}{deleteNode}}(\textcolor{keywordtype}{int}\ position);\ }
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{//\string~List();}}
+\DoxyCodeLine{00097\ \};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

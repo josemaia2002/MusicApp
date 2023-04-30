@@ -1,0 +1,45 @@
+\doxysection{src/\+Musica.cpp File Reference}
+\hypertarget{Musica_8cpp}{}\label{Musica_8cpp}\index{src/Musica.cpp@{src/Musica.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \"{}Musica.\+h\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{Musica_8cpp_aaf67805994e54249eb3f1538472e0edc}{operator$<$$<$}} (ostream \&output, const \mbox{\hyperlink{classMusica}{Musica}} \&M)
+\item 
+istream \& \mbox{\hyperlink{Musica_8cpp_ae816c1294f3bbac3657f50e875303cab}{operator$>$$>$}} (istream \&input, \mbox{\hyperlink{classMusica}{Musica}} \&M)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{Musica_8cpp_aaf67805994e54249eb3f1538472e0edc}\label{Musica_8cpp_aaf67805994e54249eb3f1538472e0edc} 
+\index{Musica.cpp@{Musica.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Musica.cpp@{Musica.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{output,  }\item[{const \mbox{\hyperlink{classMusica}{Musica}} \&}]{M }\end{DoxyParamCaption})}
+
+Specifies the behavior of the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator when dealing with a song. It is going to access the {\ttfamily titulo} and the {\ttfamily artista} fields of the song and print them.
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & The destination of the data. \\
+\hline
+{\em M} & The song which is being accessed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{Musica_8cpp_ae816c1294f3bbac3657f50e875303cab}\label{Musica_8cpp_ae816c1294f3bbac3657f50e875303cab} 
+\index{Musica.cpp@{Musica.cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Musica.cpp@{Musica.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{input,  }\item[{\mbox{\hyperlink{classMusica}{Musica}} \&}]{M }\end{DoxyParamCaption})}
+
+Specifies the behavior of the \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} operator when dealing with a song. It is going to access the {\ttfamily titulo} and the {\ttfamily artista} fields of the song and set them with the user input.
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & The destination of the data. \\
+\hline
+{\em M} & The song which is being accessed. \\
+\hline
+\end{DoxyParams}

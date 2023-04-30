@@ -1,0 +1,122 @@
+\doxysection{List.\+cpp}
+\hypertarget{List_8cpp_source}{}\label{List_8cpp_source}\index{src/List.cpp@{src/List.cpp}}
+\mbox{\hyperlink{List_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{List_8h}{List.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00008\ \mbox{\hyperlink{classList_a5c5e27671b21b3815d4e25b953c69454}{List<T>::List}}()\{}
+\DoxyCodeLine{00009\ \ \ \ \ head\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00010\ \ \ \ \ tail\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00011\ \ \ \ \ size\ =\ 0;}
+\DoxyCodeLine{00012\ \}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00015\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classList_a695092a007b977731c0f480cb1e588db}{List<T>::insertNode}}(\textcolor{keyword}{const}\ T\ \&value)\{}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{classNode}{Node<T>}}*\ n\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classNode}{Node<T>}}(value);\ \textcolor{comment}{//\ Create\ a\ new\ node;}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ Insert\ at\ the\ beginning\ if\ head\ is\ pointing\ to\ nullptr}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordflow}{if}(head\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ head\ =\ n;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ tail\ =\ n;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ size++;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ Insert\ the\ node\ at\ the\ tail}}
+\DoxyCodeLine{00027\ \ \ \ \ tail-\/>\mbox{\hyperlink{classNode_ac1c0563946c59c36bddde431b4adb00b}{next}}\ =\ n;}
+\DoxyCodeLine{00028\ \ \ \ \ tail\ =\ n;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ size++;\ \textcolor{comment}{//\ Increase\ the\ list\ size}}
+\DoxyCodeLine{00031\ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00034\ \mbox{\hyperlink{classNode}{Node<T>}}*\ \mbox{\hyperlink{classList_a0ed0f4ab03fa00e460160ae4a446d9e5}{List<T>::search}}(\textcolor{keywordtype}{int}\ index)\{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ 0;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{if}(index\ >\ size)\{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Out\ of\ bounds!"{}}\ <<\ endl;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//return;}}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{classNode}{Node<T>}}*\ temp\ =\ head;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ Traverse\ the\ list\ untill\ the\ the\ desired\ index\ is\ found}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{while}(i\ <\ (index-\/1))\{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ temp\ =\ temp-\/>\mbox{\hyperlink{classNode_ac1c0563946c59c36bddde431b4adb00b}{next}};\ \textcolor{comment}{//\ Stepping\ to\ the\ next\ node\ of\ the\ list}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{return}\ temp;}
+\DoxyCodeLine{00049\ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classList_abe4eff91f3ca33aeddaf70aae6e15a5c}{List<T>::printList}}()\{}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{classNode}{Node<T>}}*\ temp\ =\ head;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ Check\ if\ the\ Linked\ list\ is\ empty}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{if}(head\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//\ Traverse\ the\ list}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordflow}{while}(temp\ !=\ \textcolor{keyword}{nullptr})\{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ cout\ <<\ temp-\/>\mbox{\hyperlink{classNode_ac450c71a8677a38d306361f9ced518d3}{data}}\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ temp\ =\ temp-\/>\mbox{\hyperlink{classNode_ac1c0563946c59c36bddde431b4adb00b}{next}};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{00064\ \ \ \ \ \}}
+\DoxyCodeLine{00065\ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00068\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classList_afc1d36d710da2f075cc14f12179ba1c2}{List<T>::deleteNode}}(\textcolor{keywordtype}{int}\ position)\{}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordflow}{if}(head\ ==\ \textcolor{keyword}{nullptr})\{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Empty\ list!!"{}}\ <<\ endl;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordflow}{if}(position\ >\ size)\{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Out\ of\ bounds!"{}}\ <<\ endl;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{classNode}{Node<T>}}*\ temp\ =\ head;}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{classNode}{Node<T>}}*\ temp2\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ head}}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordflow}{if}(position\ ==\ 1)\{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ head\ =\ head-\/>\mbox{\hyperlink{classNode_ac1c0563946c59c36bddde431b4adb00b}{next}};\ \textcolor{comment}{//\ Head\ receives\ the\ pointer\ to\ its\ successor}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ temp;\ \textcolor{comment}{//\ The\ pointer\ that\ stores\ the\ old\ head\ is\ deleted}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ size-\/-\/;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00088\ \ \ \ \ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//\ Traverse\ the\ list\ untill\ the\ the\ desired\ index\ is\ found}}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordflow}{while}(position\ >\ 1\ )\{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ temp2\ =\ temp;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ temp\ =\ temp-\/>\mbox{\hyperlink{classNode_ac1c0563946c59c36bddde431b4adb00b}{next}};}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ position-\/-\/;}
+\DoxyCodeLine{00096\ \ \ \ \ \}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ temp2-\/>\mbox{\hyperlink{classNode_ac1c0563946c59c36bddde431b4adb00b}{next}}\ =\ temp-\/>\mbox{\hyperlink{classNode_ac1c0563946c59c36bddde431b4adb00b}{next}};}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{delete}\ temp;}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ size-\/-\/;\ \textcolor{comment}{//\ Decrease\ the\ list\ size}}
+\DoxyCodeLine{00102\ \}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00105\ \textcolor{comment}{template<class\ T>}}
+\DoxyCodeLine{00106\ \textcolor{comment}{List<T>::\string~List()\{}}
+\DoxyCodeLine{00107\ \textcolor{comment}{\ \ \ \ Node<T>*\ temp\ =\ head;}}
+\DoxyCodeLine{00108\ \textcolor{comment}{}}
+\DoxyCodeLine{00109\ \textcolor{comment}{\ \ \ \ //\ Traverse\ the\ list\ deleting\ each\ node}}
+\DoxyCodeLine{00110\ \textcolor{comment}{\ \ \ \ while(temp\ !=\ nullptr)\{}}
+\DoxyCodeLine{00111\ \textcolor{comment}{\ \ \ \ \ \ \ \ Node<T>*\ temp2\ =\ temp;}}
+\DoxyCodeLine{00112\ \textcolor{comment}{\ \ \ \ \ \ \ \ temp\ =\ temp-\/>next;}}
+\DoxyCodeLine{00113\ \textcolor{comment}{\ \ \ \ \ \ \ \ delete\ temp2;}}
+\DoxyCodeLine{00114\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{00115\ \textcolor{comment}{\}}}
+\DoxyCodeLine{00116\ \textcolor{comment}{*/}}
+
+\end{DoxyCode}

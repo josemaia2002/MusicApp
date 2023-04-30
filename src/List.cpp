@@ -11,23 +11,9 @@ List<T>::List(){
     size = 0;
 }
 
-/*
 template<class T>
-List<T>::~List(){
-    Node<T>* temp = head;
-
-    // Traverse the list deleting each node
-    while(temp != nullptr){
-        Node<T>* temp2 = temp;
-        temp = temp->next;
-        delete temp2;
-    }
-}
-*/
-
-template<class T>
-void List<T>::insertNode(const T &param){
-    Node<T>* n = new Node<T>(param); // Create a new node;
+void List<T>::insertNode(const T &value){
+    Node<T>* n = new Node<T>(value); // Create a new node;
 
     // Insert at the beginning if head is pointing to nullptr
     if(head == nullptr) {
@@ -114,3 +100,17 @@ void List<T>::deleteNode(int position){
 
     size--; // Decrease the list size
 }
+
+/*
+template<class T>
+List<T>::~List(){
+    Node<T>* temp = head;
+
+    // Traverse the list deleting each node
+    while(temp != nullptr){
+        Node<T>* temp2 = temp;
+        temp = temp->next;
+        delete temp2;
+    }
+}
+*/

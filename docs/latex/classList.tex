@@ -1,0 +1,167 @@
+\doxysection{List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classList}{}\label{classList}\index{List$<$ T $>$@{List$<$ T $>$}}
+
+
+Represents a linked list.  
+
+
+
+
+{\ttfamily \#include $<$List.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classList_a5c5e27671b21b3815d4e25b953c69454}{List}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{classList}{List}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classList_a695092a007b977731c0f480cb1e588db}{insert\+Node}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Insert a \doxylink{classNode}{Node} in the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classList_abe4eff91f3ca33aeddaf70aae6e15a5c}{print\+List}} ()
+\begin{DoxyCompactList}\small\item\em Prints all the nodes of the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classList_a0ed0f4ab03fa00e460160ae4a446d9e5}{search}} (int index)
+\begin{DoxyCompactList}\small\item\em Search for a \doxylink{classNode}{Node}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classList_afc1d36d710da2f075cc14f12179ba1c2}{delete\+Node}} (int position)
+\begin{DoxyCompactList}\small\item\em Delete a \doxylink{classNode}{Node}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classList_ae1a61bf8478bde5c20ff70e7c483e28b}{head}}
+\begin{DoxyCompactList}\small\item\em The head of the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classList_ae9ac5836a3c8b4b4953030082b014425}{tail}}
+\begin{DoxyCompactList}\small\item\em The tail of the list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classList_a9bcdc47851f17550669b03ef3fd3f6b9}{size}}
+\begin{DoxyCompactList}\small\item\em The list size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class List$<$ T $>$}
+Represents a linked list. 
+
+This is a template class that represents a linked list composed of generic type nodes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classList_a5c5e27671b21b3815d4e25b953c69454}\label{classList_a5c5e27671b21b3815d4e25b953c69454} 
+\index{List$<$ T $>$@{List$<$ T $>$}!List@{List}}
+\index{List@{List}!List$<$ T $>$@{List$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classList}{List}}$<$ T $>$\mbox{\hyperlink{classList}{\+::\+List}}}
+
+
+
+Creates a new \doxylink{classList}{List}. 
+
+Creates a new \doxylink{classList}{List} and sets the head and the tail to point to NULL, and sets the size to zero, i.\+e. an empty list. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classList_afc1d36d710da2f075cc14f12179ba1c2}\label{classList_afc1d36d710da2f075cc14f12179ba1c2} 
+\index{List$<$ T $>$@{List$<$ T $>$}!deleteNode@{deleteNode}}
+\index{deleteNode@{deleteNode}!List$<$ T $>$@{List$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deleteNode()}{deleteNode()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classList}{List}}$<$ T $>$\+::delete\+Node (\begin{DoxyParamCaption}\item[{int}]{position }\end{DoxyParamCaption})}
+
+
+
+Delete a \doxylink{classNode}{Node}. 
+
+Traverse the linked list untill the specified position, and then deletes the \doxylink{classNode}{Node}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The location of the node that must be deleted. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classList_a695092a007b977731c0f480cb1e588db}\label{classList_a695092a007b977731c0f480cb1e588db} 
+\index{List$<$ T $>$@{List$<$ T $>$}!insertNode@{insertNode}}
+\index{insertNode@{insertNode}!List$<$ T $>$@{List$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insertNode()}{insertNode()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classList}{List}}$<$ T $>$\+::insert\+Node (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Insert a \doxylink{classNode}{Node} in the list. 
+
+Creates a new \doxylink{classNode}{Node} of a specified type and inserts the \doxylink{classNode}{Node} at the end of the list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The data that\textquotesingle{}s going to be used to create a new node. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classList_abe4eff91f3ca33aeddaf70aae6e15a5c}\label{classList_abe4eff91f3ca33aeddaf70aae6e15a5c} 
+\index{List$<$ T $>$@{List$<$ T $>$}!printList@{printList}}
+\index{printList@{printList}!List$<$ T $>$@{List$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{printList()}{printList()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classList}{List}}$<$ T $>$\+::print\+List}
+
+
+
+Prints all the nodes of the list. 
+
+Traverse the linked list accessing the data field of each node and printing it. \Hypertarget{classList_a0ed0f4ab03fa00e460160ae4a446d9e5}\label{classList_a0ed0f4ab03fa00e460160ae4a446d9e5} 
+\index{List$<$ T $>$@{List$<$ T $>$}!search@{search}}
+\index{search@{search}!List$<$ T $>$@{List$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classList}{List}}$<$ T $>$\+::search (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Search for a \doxylink{classNode}{Node}. 
+
+Traverse the linked list untill the desired index is reached, and then returns the found \doxylink{classNode}{Node}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The location of the node inside of the list.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \doxylink{classNode}{Node} that is located at the specified index. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classList_ae1a61bf8478bde5c20ff70e7c483e28b}\label{classList_ae1a61bf8478bde5c20ff70e7c483e28b} 
+\index{List$<$ T $>$@{List$<$ T $>$}!head@{head}}
+\index{head@{head}!List$<$ T $>$@{List$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{head}{head}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classNode}{Node}}$<$T$>$\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classList}{List}}$<$ T $>$\+::head}
+
+
+
+The head of the list. 
+
+Represents the linked list first node. It is linked to the next element, which is then linked to its successor until the end of the list. \Hypertarget{classList_a9bcdc47851f17550669b03ef3fd3f6b9}\label{classList_a9bcdc47851f17550669b03ef3fd3f6b9} 
+\index{List$<$ T $>$@{List$<$ T $>$}!size@{size}}
+\index{size@{size}!List$<$ T $>$@{List$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{classList}{List}}$<$ T $>$\+::size}
+
+
+
+The list size. 
+
+Represents the linked list size i.\+e. its number of elements. \Hypertarget{classList_ae9ac5836a3c8b4b4953030082b014425}\label{classList_ae9ac5836a3c8b4b4953030082b014425} 
+\index{List$<$ T $>$@{List$<$ T $>$}!tail@{tail}}
+\index{tail@{tail}!List$<$ T $>$@{List$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tail}{tail}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classNode}{Node}}$<$T$>$\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classList}{List}}$<$ T $>$\+::tail}
+
+
+
+The tail of the list. 
+
+Represents the linked list last node. The previous node is linked to it, while the tail is pointing to NULL. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{List_8h}{List.\+h}}\item 
+src/\mbox{\hyperlink{List_8cpp}{List.\+cpp}}\end{DoxyCompactItemize}

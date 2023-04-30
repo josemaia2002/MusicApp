@@ -14,8 +14,6 @@ Playlist::Playlist(string nome){
 
 
 ostream &operator<<(ostream &output, const Playlist &P) { 
-    // P.musicas.printList();
     output << "Nome: " << P.nome << endl;
-    // P.musicas.printList();
     return output;            
 }
