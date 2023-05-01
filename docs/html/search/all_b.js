@@ -1,7 +1,7 @@
 var searchData=
 [
   ['readme_2emd_0',['README.md',['../README_8md.html',1,'']]],
-  ['removefromplaylist_1',['removeFromPlaylist',['../main_8cpp.html#a5c3316bad44832b05442dd5c4895ae70',1,'main.cpp']]],
-  ['removermusica_2',['removerMusica',['../main_8cpp.html#ad5f248b16ca393787e74132d81786c32',1,'main.cpp']]],
-  ['removerplaylist_3',['removerPlaylist',['../main_8cpp.html#a6015c1e8340315b3dee0ac5d8134a65a',1,'main.cpp']]]
+  ['removefromplaylist_1',['removeFromPlaylist',['../classSistema.html#ae65431f4d37c9264becafb6b01523519',1,'Sistema']]],
+  ['removermusica_2',['removerMusica',['../classSistema.html#a7a9bda191eb4add0baf7da1020d7c6aa',1,'Sistema']]],
+  ['removerplaylist_3',['removerPlaylist',['../classSistema.html#a39588e72176940f5aaa03329dbaf0e8f',1,'Sistema']]]
 ];

@@ -1,0 +1,248 @@
+\doxysection{Sistema Class Reference}
+\hypertarget{classSistema}{}\label{classSistema}\index{Sistema@{Sistema}}
+
+
+Represents the system.  
+
+
+
+
+{\ttfamily \#include $<$Sistema.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classSistema_a8f495d4e60e3f0ed3d6f048a436cbb40}{menu1}} ()
+\begin{DoxyCompactList}\small\item\em Prints the first menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSistema_a40c781c46b35a09d027864d2e710f83a}{menu2}} ()
+\begin{DoxyCompactList}\small\item\em Prints the second menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSistema_ab79d0a4be463f51538f495334d0dd08a}{menu3}} ()
+\begin{DoxyCompactList}\small\item\em Prints the third menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSistema_aa586522927707e256636bcd756a83f58}{menu4}} ()
+\begin{DoxyCompactList}\small\item\em Prints the fourth menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSistema_a6b96d81fcd99bea6eed7ace0b29e6edc}{menu5}} ()
+\begin{DoxyCompactList}\small\item\em Prints the fifth menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSistema_ac1d40b2c0b6c9738fe2293b69c65e34e}{cadastrar\+Musica}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classMusica}{Musica}} $>$ \&L)
+\begin{DoxyCompactList}\small\item\em Register a song in the system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSistema_a7a9bda191eb4add0baf7da1020d7c6aa}{remover\+Musica}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classMusica}{Musica}} $>$ \&L)
+\begin{DoxyCompactList}\small\item\em Deletes a song from the system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSistema_a11724c4e0b6bdcca75b8ba35ccd33ab5}{cadastrar\+Playlist}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&P)
+\begin{DoxyCompactList}\small\item\em Creates a new playlist. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSistema_a39588e72176940f5aaa03329dbaf0e8f}{remover\+Playlist}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&P)
+\begin{DoxyCompactList}\small\item\em Removes a playlist. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSistema_a98f397eeb1d5209e9afce49b6fbef510}{listar\+Playlists}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&P)
+\begin{DoxyCompactList}\small\item\em Lists all the playlists. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSistema_aa17e34c5957aa1a9bce63e0db14b49fd}{add\+To\+Playlist}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&P, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classMusica}{Musica}} $>$ \&L, int position\+Playlist)
+\begin{DoxyCompactList}\small\item\em Add a song to the current playlist. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSistema_ae65431f4d37c9264becafb6b01523519}{remove\+From\+Playlist}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&P, int position\+Playlist)
+\begin{DoxyCompactList}\small\item\em Removes a song from the current playlist. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSistema_ab9cae9fbd88e6d333121feaae76cc5dc}{print\+Menu}} (\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classMusica}{Musica}} $>$ \&L, \mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&P)
+\begin{DoxyCompactList}\small\item\em Integrates all the system\textquotesingle{}s functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the system. 
+
+This is a class that represents the system and deals with the user interaction, serving as an interface, and integrating all the project. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSistema_aa17e34c5957aa1a9bce63e0db14b49fd}\label{classSistema_aa17e34c5957aa1a9bce63e0db14b49fd} 
+\index{Sistema@{Sistema}!addToPlaylist@{addToPlaylist}}
+\index{addToPlaylist@{addToPlaylist}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{addToPlaylist()}{addToPlaylist()}}
+{\footnotesize\ttfamily void Sistema\+::add\+To\+Playlist (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&}]{P,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classMusica}{Musica}} $>$ \&}]{L,  }\item[{int}]{position\+Playlist }\end{DoxyParamCaption})}
+
+
+
+Add a song to the current playlist. 
+
+Receives the position of the song inside of the system\textquotesingle{}s list of songs, and inserts this song in the playlist.
+
+
+\begin{DoxyParams}{Parameters}
+{\em P} & The list of playlists that contains all the playlists of the system. \\
+\hline
+{\em L} & The list of songs that contains all the songs of the system, and where the song to be deleted is stored. \\
+\hline
+{\em position\+Playlist} & The location of the playlist inside of the system\textquotesingle{}s list of playlists. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSistema_ac1d40b2c0b6c9738fe2293b69c65e34e}\label{classSistema_ac1d40b2c0b6c9738fe2293b69c65e34e} 
+\index{Sistema@{Sistema}!cadastrarMusica@{cadastrarMusica}}
+\index{cadastrarMusica@{cadastrarMusica}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{cadastrarMusica()}{cadastrarMusica()}}
+{\footnotesize\ttfamily void Sistema\+::cadastrar\+Musica (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classMusica}{Musica}} $>$ \&}]{L }\end{DoxyParamCaption})}
+
+
+
+Register a song in the system. 
+
+Receives the information about the song, creating it and registering the song in the system.
+
+
+\begin{DoxyParams}{Parameters}
+{\em L} & The list of songs that contains all the songs of the system, and where the new song will be stored. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSistema_a11724c4e0b6bdcca75b8ba35ccd33ab5}\label{classSistema_a11724c4e0b6bdcca75b8ba35ccd33ab5} 
+\index{Sistema@{Sistema}!cadastrarPlaylist@{cadastrarPlaylist}}
+\index{cadastrarPlaylist@{cadastrarPlaylist}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{cadastrarPlaylist()}{cadastrarPlaylist()}}
+{\footnotesize\ttfamily void Sistema\+::cadastrar\+Playlist (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&}]{P }\end{DoxyParamCaption})}
+
+
+
+Creates a new playlist. 
+
+Creates a new playlist, receives the desired name to be assigned to the playlist, and inserts the playlist in the system\textquotesingle{}s list of playlists.
+
+
+\begin{DoxyParams}{Parameters}
+{\em P} & The list of playlists that contains all the playlist of the system. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSistema_a98f397eeb1d5209e9afce49b6fbef510}\label{classSistema_a98f397eeb1d5209e9afce49b6fbef510} 
+\index{Sistema@{Sistema}!listarPlaylists@{listarPlaylists}}
+\index{listarPlaylists@{listarPlaylists}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{listarPlaylists()}{listarPlaylists()}}
+{\footnotesize\ttfamily void Sistema\+::listar\+Playlists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&}]{P }\end{DoxyParamCaption})}
+
+
+
+Lists all the playlists. 
+
+Receives the position of the playlist and deletes it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em P} & The list of playlists that contains all the playlists of the system. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSistema_a8f495d4e60e3f0ed3d6f048a436cbb40}\label{classSistema_a8f495d4e60e3f0ed3d6f048a436cbb40} 
+\index{Sistema@{Sistema}!menu1@{menu1}}
+\index{menu1@{menu1}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{menu1()}{menu1()}}
+{\footnotesize\ttfamily void Sistema\+::menu1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints the first menu. 
+
+This funtion shows the options to the user, letting him choose between some options. The user can choose to manage the songs, manage the playlists, manage the songs of each playlist or quit the app. \Hypertarget{classSistema_a40c781c46b35a09d027864d2e710f83a}\label{classSistema_a40c781c46b35a09d027864d2e710f83a} 
+\index{Sistema@{Sistema}!menu2@{menu2}}
+\index{menu2@{menu2}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{menu2()}{menu2()}}
+{\footnotesize\ttfamily void Sistema\+::menu2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints the second menu. 
+
+This funtion prints a submenu which shows options to the user, letting him choose to register, remove or list the songs of the system or going back to the first menu. \Hypertarget{classSistema_ab79d0a4be463f51538f495334d0dd08a}\label{classSistema_ab79d0a4be463f51538f495334d0dd08a} 
+\index{Sistema@{Sistema}!menu3@{menu3}}
+\index{menu3@{menu3}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{menu3()}{menu3()}}
+{\footnotesize\ttfamily void Sistema\+::menu3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints the third menu. 
+
+This funtion prints a submenu which shows options to the user, letting him choose to register, remove or list the playlists of the system or going back to the first menu. \Hypertarget{classSistema_aa586522927707e256636bcd756a83f58}\label{classSistema_aa586522927707e256636bcd756a83f58} 
+\index{Sistema@{Sistema}!menu4@{menu4}}
+\index{menu4@{menu4}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{menu4()}{menu4()}}
+{\footnotesize\ttfamily void Sistema\+::menu4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints the fourth menu. 
+
+This funtion prints a submenu which shows options to the user, letting him choose to navigate to a specific playlist or going back to the first menu. \Hypertarget{classSistema_a6b96d81fcd99bea6eed7ace0b29e6edc}\label{classSistema_a6b96d81fcd99bea6eed7ace0b29e6edc} 
+\index{Sistema@{Sistema}!menu5@{menu5}}
+\index{menu5@{menu5}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{menu5()}{menu5()}}
+{\footnotesize\ttfamily void Sistema\+::menu5 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints the fifth menu. 
+
+This funtion prints a submenu which shows options to the user, letting him choose to add or remove a song from the current playlist or list the songs of the playlist, and also lets the user go back the fourth menu. \Hypertarget{classSistema_ab9cae9fbd88e6d333121feaae76cc5dc}\label{classSistema_ab9cae9fbd88e6d333121feaae76cc5dc} 
+\index{Sistema@{Sistema}!printMenu@{printMenu}}
+\index{printMenu@{printMenu}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{printMenu()}{printMenu()}}
+{\footnotesize\ttfamily void Sistema\+::print\+Menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classMusica}{Musica}} $>$ \&}]{L,  }\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&}]{P }\end{DoxyParamCaption})}
+
+
+
+Integrates all the system\textquotesingle{}s functions. 
+
+This function works as an inteface with the user, receiving data from him, processing it and showing the user the output. It keeps the system working in loop untill the user decides the quit, and lets the user to navigate between menus, and also calls specific functions according to the user input.
+
+
+\begin{DoxyParams}{Parameters}
+{\em P} & The list of playlists that contains all the playlists of the system. \\
+\hline
+{\em L} & The list of songs that contains all the songs of the system, and where the song to be deleted is stored. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSistema_ae65431f4d37c9264becafb6b01523519}\label{classSistema_ae65431f4d37c9264becafb6b01523519} 
+\index{Sistema@{Sistema}!removeFromPlaylist@{removeFromPlaylist}}
+\index{removeFromPlaylist@{removeFromPlaylist}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{removeFromPlaylist()}{removeFromPlaylist()}}
+{\footnotesize\ttfamily void Sistema\+::remove\+From\+Playlist (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&}]{P,  }\item[{int}]{position\+Playlist }\end{DoxyParamCaption})}
+
+
+
+Removes a song from the current playlist. 
+
+Receives the position of the song inside of the system\textquotesingle{}s list of songs, and removes this song from the playlist.
+
+
+\begin{DoxyParams}{Parameters}
+{\em P} & The list of playlists that contains all the playlists of the system. \\
+\hline
+{\em position\+Playlist} & The location of the playlist inside of the system\textquotesingle{}s list of playlists. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSistema_a7a9bda191eb4add0baf7da1020d7c6aa}\label{classSistema_a7a9bda191eb4add0baf7da1020d7c6aa} 
+\index{Sistema@{Sistema}!removerMusica@{removerMusica}}
+\index{removerMusica@{removerMusica}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{removerMusica()}{removerMusica()}}
+{\footnotesize\ttfamily void Sistema\+::remover\+Musica (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classMusica}{Musica}} $>$ \&}]{L }\end{DoxyParamCaption})}
+
+
+
+Deletes a song from the system. 
+
+Receives the position of the song and deletes it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em L} & The list of songs that contains all the songs of the system, and where the song to be deleted is stored. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSistema_a39588e72176940f5aaa03329dbaf0e8f}\label{classSistema_a39588e72176940f5aaa03329dbaf0e8f} 
+\index{Sistema@{Sistema}!removerPlaylist@{removerPlaylist}}
+\index{removerPlaylist@{removerPlaylist}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{removerPlaylist()}{removerPlaylist()}}
+{\footnotesize\ttfamily void Sistema\+::remover\+Playlist (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList}{List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&}]{P }\end{DoxyParamCaption})}
+
+
+
+Removes a playlist. 
+
+Receives the position of the playlist and deletes it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em P} & The list of playlists that contains all the playlist of the system. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Sistema_8h}{Sistema.\+h}}\item 
+src/\mbox{\hyperlink{Sistema_8cpp}{Sistema.\+cpp}}\end{DoxyCompactItemize}
