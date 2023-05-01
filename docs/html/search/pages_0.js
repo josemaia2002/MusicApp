@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['compiling_0',['Compiling',['../md_README.html',1,'']]]
+  ['installation_0',['Installation',['../md_README.html',1,'']]]
 ];
