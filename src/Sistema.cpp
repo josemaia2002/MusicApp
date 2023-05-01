@@ -4,85 +4,42 @@
 
 using namespace std;
 
-void Sistema::menu1(int lang){
-    if(lang == 1){
-        cout << "Enter the number according to the option you want:" << endl;
-        cout << "1 - Manage songs" << endl;
-        cout << "2 - Manage playlists" << endl;
-        cout << "3 - Manage songs of a playlist" << endl;
-        cout << "0 - Quit" << endl;
-    }
-    else{
-        cout << "Digite o numero de acordo com a opção que queira realizar:" << endl;
-        cout << "1 - Gerenciar Musicas" << endl;
-        cout << "2 - Gerenciar Playlists" << endl;
-        cout << "3 - Gerenciar Musicas em uma playlist" << endl;
-        cout << "0 - Sair" << endl;     
-    }
+void Sistema::menu1(){
+    cout << "Digite o numero de acordo com a opção que queira realizar:" << endl;
+    cout << "1 - Gerenciar Musicas" << endl;
+    cout << "2 - Gerenciar Playlists" << endl;
+    cout << "3 - Gerenciar Musicas em uma playlist" << endl;
+    cout << "0 - Sair" << endl;     
 }
 
-void Sistema::menu2(int lang){
-    if(lang == 1){
-        cout << "Enter the number according to the option you want:" << endl;
-        cout << "1 - Register a song" << endl;
-        cout << "2 - Remove a song" << endl;
-        cout << "3 - List the songs" << endl;
-        cout << "0 - Back" << endl;
-    }
-    else{
-        cout << "Digite o numero de acordo com a opção que queira realizar:" << endl;
-        cout << "1 - Cadastrar uma músicas" << endl;
-        cout << "2 - Remover uma músicas" << endl;
-        cout << "3 - Listar as músicas" << endl;
-        cout << "0 - voltar" << endl;   
-    }
+void Sistema::menu2(){
+    cout << "Digite o numero de acordo com a opção que queira realizar:" << endl;
+    cout << "1 - Cadastrar uma músicas" << endl;
+    cout << "2 - Remover uma músicas" << endl;
+    cout << "3 - Listar as músicas" << endl;
+    cout << "0 - voltar" << endl;   
 }
 
-void Sistema::menu3(int lang){
-    if(lang == 1){
-        cout << "Enter the number according to the option you want:" << endl;
-        cout << "1 - Register a playlist" << endl;
-        cout << "2 - Remove a playlist" << endl;
-        cout << "3 - List the playlists" << endl;
-        cout << "0 - Back" << endl;
-    }
-    else{
-        cout << "Digite o numero de acordo com a opção que queira realizar:" << endl;
-        cout << "1 - Cadastrar uma playlist" << endl;
-        cout << "2 - Remover uma playlist" << endl;
-        cout << "3 - Listar as playlists" << endl;
-        cout << "0 - voltar" << endl; 
-    }
+void Sistema::menu3(){
+    cout << "Digite o numero de acordo com a opção que queira realizar:" << endl;
+    cout << "1 - Cadastrar uma playlist" << endl;
+    cout << "2 - Remover uma playlist" << endl;
+    cout << "3 - Listar as playlists" << endl;
+    cout << "0 - voltar" << endl; 
 }
 
-void Sistema::menu4(int lang){
-    if(lang == 1){
-        cout << "Enter the number according to the option you want:" << endl;
-        cout << "1 - Search for a playlist" << endl;
-        cout << "0 - Back" << endl;
-    }
-    else{
-        cout << "Digite o numero de acordo com a opção que queira realizar:" << endl;
-        cout << "1 - Buscar uma playlist" << endl;
-        cout << "0 - voltar" << endl;
-    }
+void Sistema::menu4(){
+    cout << "Digite o numero de acordo com a opção que queira realizar:" << endl;
+    cout << "1 - Buscar uma playlist" << endl;
+    cout << "0 - voltar" << endl;
 }
 
-void Sistema::menu5(int lang){
-    if(lang == 1){
-        cout << "Enter the number according to the option you want:" << endl;
-        cout << "1 - Add a song" << endl;
-        cout << "2 - Remove a song" << endl;
-        cout << "3 - List the songs" << endl;
-        cout << "0 - Back" << endl;
-    }
-    else{
-        cout << "Digite o numero de acordo com a opção que queira realizar:" << endl;
-        cout << "1 - Adicionar uma música" << endl;
-        cout << "2 - Remover uma música" << endl;
-        cout << "3 - Listar as músicas" << endl;
-        cout << "0 - voltar" << endl;
-    }
+void Sistema::menu5(){
+    cout << "Digite o numero de acordo com a opção que queira realizar:" << endl;
+    cout << "1 - Adicionar uma música" << endl;
+    cout << "2 - Remover uma música" << endl;
+    cout << "3 - Listar as músicas" << endl;
+    cout << "0 - voltar" << endl;
 }
 
 void Sistema::cadastrarMusica(List<Musica>& L){
@@ -139,12 +96,9 @@ void Sistema::printMenu(List<Musica>& L, List<Playlist>& P){
     Playlist play;
     int choice, quit = 1;
     int positionPlaylist;
-    int lang;
-
-    cin >> lang;
 
     do{
-        menu1(lang);
+        menu1();
         cin >> choice;
         quit = choice;
 
@@ -156,34 +110,40 @@ void Sistema::printMenu(List<Musica>& L, List<Playlist>& P){
                     break;
             case 1:
                 do{
-                    menu2(lang);
+                    menu2();
                     cin >> choice;
                     if(choice == 0)
                         continue;
                     else if(choice == 1){
+                        cout << "Informe o titulo da musica e o artista:" << endl;
                         cadastrarMusica(L);
                     }   
                     else if(choice == 2){
                         cout << "Escolha uma musica para ser removida\n";
                         removerMusica(L);
                     }
-                    else if(choice == 3)
+                    else if(choice == 3){
                         cout << "Listando musicas\n";
                         L.printList();
+                    }
                 }
                 while(choice != 0);
                 quit = 1;
                 break;
             case 2:
                 do{
-                    menu3(lang);
+                    menu3();
                     cin >> choice;
                     if(choice == 0)
                         continue;
-                    else if(choice == 1)
+                    else if(choice == 1){
+                        cout << "Informe o nome da playlist:" << endl;
                         cadastrarPlaylist(P);
-                    else if(choice == 2)
+                    }
+                    else if(choice == 2){
+                        cout << "Informe o indice da playlist:" << endl;
                         removerPlaylist(P);
+                    }
                     else if(choice == 3){
                         listarPlaylists(P);
                     }
@@ -193,23 +153,26 @@ void Sistema::printMenu(List<Musica>& L, List<Playlist>& P){
                 break;
             case 3:
                 do{
-                    menu4(lang);
+                    menu4();
                     cin >> choice;
                     quit = choice;
                     if(choice == 0)
                         continue;
                     else if(choice == 1){
-                        cout << "Buscando playlist\n";
+                        cout << "Informe o indice da playlist\n";
                         cin >> positionPlaylist;
                         
                         do{
-                            menu5(lang);
+                            menu5();
                             cin >> choice;
                             if(choice == 0)
                                 continue;
-                            else if(choice == 1)
+                            else if(choice == 1){
+                                cout << "Informe o indice da musica" << endl;
                                 addToPlaylist(P, L, positionPlaylist);
+                            }
                             else if(choice == 2){
+                                cout << "Informe o indice da musica" << endl;
                                 removeFromPlaylist(P, positionPlaylist);
                             }
                             else if(choice == 3){
