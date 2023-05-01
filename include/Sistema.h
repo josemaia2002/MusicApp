@@ -29,7 +29,7 @@ public:
      * The user can choose to manage the songs, manage the
      * playlists, manage the songs of each playlist or quit the app.
      */
-    void menu1();
+    void menu1(int language);
 
     /**
      * \brief Prints the second menu.
@@ -38,7 +38,7 @@ public:
      * letting him choose to register, remove or list the songs of the system
      * or going back to the first menu.
      */
-    void menu2();
+    void menu2(int language);
 
     /**
      * \brief Prints the third menu.
@@ -47,7 +47,7 @@ public:
      * letting him choose to register, remove or list the playlists of the system
      * or going back to the first menu.
      */
-    void menu3();
+    void menu3(int language);
 
     /**
      * \brief Prints the fourth menu.
@@ -56,7 +56,7 @@ public:
      * letting him choose to navigate to a specific playlist or going 
      * back to the first menu.
      */
-    void menu4();
+    void menu4(int language);
 
     /**
      * \brief Prints the fifth menu.
@@ -66,7 +66,7 @@ public:
      * or list the songs of the playlist, and also lets the user go back
      * the fourth menu.
      */
-    void menu5();
+    void menu5(int language);
 
     /**
      * \brief Register a song in the system.
