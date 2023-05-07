@@ -17,5 +17,19 @@ int main(){
 
     app.printMenu(l, playlists);
 
+/*
+
+    cout << "Testes" << endl;
+
+    cout << playlists.search(1)->data.getNome() << endl;
+
+    playlists.printList();
+
+    playlists.search(1)->data.getMusicas().insertNode(l.search(3)->data);
+
+    playlists.search(1)->data.getMusicas().printList();
+
+*/    
+
     return 0;
 }

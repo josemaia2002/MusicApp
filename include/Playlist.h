@@ -14,7 +14,7 @@ using namespace std;
  * contains specific songs and the playlist name.
  */
 class Playlist {
-public:
+private:
     /**
      * \brief The playlist name.
      * 
@@ -22,6 +22,7 @@ public:
      */ 
     string nome;
 
+public:
     /**
      * \brief The list of songs.
      * 
@@ -61,6 +62,11 @@ public:
      * \param P The Playlist which is being accessed.
      */
     friend ostream &operator<<(ostream &output, const Playlist &P);
+
+    string getNome();
+    void setNome(string nome);
+
+    List<Musica> getMusicas();
 };
 
 #endif
