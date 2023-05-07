@@ -85,8 +85,6 @@ void Sistema::addToPlaylist(List<Playlist>& P, List<Musica>& L, int positionPlay
     cin >> positionMusica;
 
     P.search(positionPlaylist)->data.musicas.insertNode(L.search(positionMusica)->data);
-
-    // P.search(positionPlaylist)->data.getMusicas().insertNode(L.search(positionMusica)->data);
 }
 
 void Sistema::removeFromPlaylist(List<Playlist>& P, int positionPlaylist){
@@ -181,7 +179,7 @@ void Sistema::printMenu(List<Musica>& L, List<Playlist>& P){
                             }
                             else if(choice == 3){
                                 int tam = P.search(positionPlaylist)->data.musicas.size;
-                                P.search(positionPlaylist)->data.getMusicas().printList();
+                                P.search(positionPlaylist)->data.musicas.printList();
                             }
                         }
                         while(choice != 0);
