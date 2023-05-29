@@ -93,7 +93,7 @@ public:
      */
     void deleteNode(int position); 
 
-    //~List();
+    ~List();
 };
 
 #endif

@@ -101,7 +101,6 @@ void List<T>::deleteNode(int position){
     size--; // Decrease the list size
 }
 
-/*
 template<class T>
 List<T>::~List(){
     Node<T>* temp = head;
@@ -113,4 +112,3 @@ List<T>::~List(){
         delete temp2;
     }
 }
-*/
