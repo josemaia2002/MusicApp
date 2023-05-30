@@ -20,9 +20,8 @@ private:
      * 
      * Represents the name of the playlist.
      */ 
-    string nome;
+    string nome;    
 
-public:
     /**
      * \brief The list of songs.
      * 
@@ -31,6 +30,7 @@ public:
      */ 
     List<Musica> musicas;
 
+public:    
     /**
      * \brief Creates a new Playlist.
      * 
@@ -65,6 +65,9 @@ public:
 
     string getNome();
     void setNome(string nome);
+
+    List<Musica>& getMusicas();
+    //void setMusicas(List<Musica> l);
 };
 
 #endif

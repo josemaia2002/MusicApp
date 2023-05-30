@@ -24,3 +24,7 @@ string Playlist::getNome() {
 void Playlist::setNome(string nome) {
     this->nome = nome;
 }
+
+List<Musica>& Playlist::getMusicas() {
+    return this->musicas;
+}

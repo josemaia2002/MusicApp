@@ -84,14 +84,14 @@ void Sistema::addToPlaylist(List<Playlist>& P, List<Musica>& L, int positionPlay
     int positionMusica;
     cin >> positionMusica;
 
-    P.search(positionPlaylist)->data.musicas.insertNode(L.search(positionMusica)->data);
+    P.search(positionPlaylist)->data.getMusicas().insertNode(L.search(positionMusica)->data);
 }
 
 void Sistema::removeFromPlaylist(List<Playlist>& P, int positionPlaylist){
     int positionMusica;
     cin >> positionMusica;
 
-    P.search(positionPlaylist)->data.musicas.deleteNode(positionMusica);
+    P.search(positionPlaylist)->data.getMusicas().deleteNode(positionMusica);
 }
 
 void Sistema::printMenu(List<Musica>& L, List<Playlist>& P){
@@ -178,8 +178,8 @@ void Sistema::printMenu(List<Musica>& L, List<Playlist>& P){
                                 removeFromPlaylist(P, positionPlaylist);
                             }
                             else if(choice == 3){
-                                int tam = P.search(positionPlaylist)->data.musicas.size;
-                                P.search(positionPlaylist)->data.musicas.printList();
+                                int tam = P.search(positionPlaylist)->data.getMusicas().size;
+                                P.search(positionPlaylist)->data.getMusicas().printList();
                             }
                         }
                         while(choice != 0);
