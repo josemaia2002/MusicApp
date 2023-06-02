@@ -93,6 +93,8 @@ public:
      */
     void deleteNode(int position); 
 
+    void addElements(List<Musica>& L);
+
     ~List();
 };
 

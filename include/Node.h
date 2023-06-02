@@ -32,7 +32,7 @@ public:
      * link the elements of a linked list, with each node pointing
      * to the next one.
      */
-    Node* next;
+    Node<T>* next;
 
     /**
      * \brief Creates a new Node.

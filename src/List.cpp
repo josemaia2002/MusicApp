@@ -101,6 +101,40 @@ void List<T>::deleteNode(int position){
     size--; // Decrease the list size
 }
 
+
+
+template<class T>
+void List<T>::addElements(List<Musica>& L){
+    // Creates a temp node that stores the head of the received linked list    
+    Node<T>* temp = L.head;
+
+    // Check if the currente Linked list is empty
+    if(head == nullptr)
+        return;
+
+    // Traverse the received list and insert its elements in the current list
+    while(temp != nullptr){
+        insertNode(temp->data);
+        temp = temp->next;
+    }
+
+/*
+    // Check if the Linked list is empty
+    if(temp == nullptr)
+        return;
+
+    // Traverse the list
+    while(temp != nullptr){
+        cout << temp->data << " ";
+        temp = temp->next;
+        cout << endl;
+    }
+    */
+
+}
+
+
+
 template<class T>
 List<T>::~List(){
     Node<T>* temp = head;
