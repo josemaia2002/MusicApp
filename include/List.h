@@ -93,6 +93,14 @@ public:
      */
     void deleteNode(int position); 
 
+    /**
+     * \brief Add a list to the current list.
+     * 
+     * It receives a list, traverse it and inserts
+     * each of its elements in the current list.
+     * 
+     * \param L The list whose elements will be added.
+     */
     void addElements(List<Musica>& L);
 
     ~List();
