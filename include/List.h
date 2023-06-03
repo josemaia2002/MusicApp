@@ -169,9 +169,10 @@ public:
     /**
      * \brief Search for a specific value.
      * 
-     * Traverse the linked list untill the desired
-     * data is reached, and then returns the posiotion
-     * where it was found.
+     * This function receives a value from a generic
+     * data type, and traverse the linked list, and if 
+     * the value is found, then the index where it was located
+     * will be returned.
      * 
      * \param value The data that is being searched.
      * 
