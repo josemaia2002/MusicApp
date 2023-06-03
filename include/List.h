@@ -49,7 +49,11 @@ public:
      * and the tail to point to NULL, and sets
      * the size to zero, i.e. an empty list.
      */
-    List(); 
+    List(){
+        head = nullptr;
+        tail = nullptr;
+        size = 0;
+    }
 
     /**
      * \brief Insert a Node in the list.
@@ -60,7 +64,23 @@ public:
      * \param value The data that's going to be used 
      * to create a new node.
      */
-    void insertNode(const T &value); 
+    void insertNode(const T &value){
+        Node<T>* n = new Node<T>(value); // Create a new node;
+
+        // Insert at the beginning if head is pointing to nullptr
+        if(head == nullptr) {
+            head = n;
+            tail = n;
+            size++;
+            return;
+        }
+
+        // Insert the node at the tail
+        tail->next = n;
+        tail = n;
+
+        size++; // Increase the list size
+    }
 
     /**
      * \brief Prints all the nodes of the list.
@@ -68,7 +88,22 @@ public:
      * Traverse the linked list accessing the
      * data field of each node and printing it.
      */
-    void printList();
+    void printList(){
+        Node<T>* temp = head;
+
+        // Check if the Linked list is empty
+        if(head == nullptr){
+            cout << "Hello hello" << endl;
+            return;
+        }
+
+        // Traverse the list
+        while(temp != nullptr){
+            cout << temp->data << " ";
+            temp = temp->next;
+            cout << endl;
+        }
+    }
 
     /**
      * \brief Search for a Node.
@@ -80,7 +115,22 @@ public:
      * 
      * \return The Node that is located at the specified index.
      */
-    Node<T>* search(int index);
+    Node<T>* search(int index){
+        int i = 0;
+        if(index > size){
+            cout << "Out of bounds!" << endl;
+            //return;
+        }
+
+        Node<T>* temp = head;
+        // Traverse the list untill the the desired index is found
+        while(i < (index-1)){
+            temp = temp->next; // Stepping to the next node of the list
+            i++;
+        }
+
+        return temp;
+    }
 
     /**
      * \brief Delete a Node.
@@ -91,7 +141,41 @@ public:
      * \param position The location of the node that
      * must be deleted.
      */
-    void deleteNode(int position); 
+    void deleteNode(int position){
+        if(head == nullptr){
+            cout << "Empty list!!" << endl;
+            return;
+        }
+
+        if(position > size){
+            cout << "Out of bounds!" << endl;
+            return;
+        }
+
+        Node<T>* temp = head;
+        Node<T>* temp2 = nullptr;
+
+        // Delete the head
+        if(position == 1){
+            head = head->next; // Head receives the pointer to its successor
+            delete temp; // The pointer that stores the old head is deleted
+            size--;
+            return;
+        }
+
+        // Traverse the list untill the the desired index is found
+        while(position > 1 ){
+            temp2 = temp;
+            temp = temp->next;
+            
+            position--;
+        }
+
+        temp2->next = temp->next;
+        delete temp;
+
+        size--; // Decrease the list size
+    }
 
     /**
      * \brief Add a list to the current list.
@@ -101,9 +185,27 @@ public:
      * 
      * \param L The list whose elements will be added.
      */
-    void addElements(List<Musica>& L);
+    void addElements(List<Musica>& L){
+        // Creates a temp node that stores the head of the received linked list    
+        Node<T>* temp = L.head;
 
-    ~List();
+        // Traverse the received list and insert its elements in the current list
+        while(temp != nullptr){
+            insertNode(temp->data);
+            temp = temp->next;
+        }
+    }
+
+    ~List(){
+         Node<T>* temp = head;
+
+        // Traverse the list deleting each node
+        while(temp != nullptr){
+            Node<T>* temp2 = temp;
+            temp = temp->next;
+            delete temp2;
+        }
+    }
 };
 
 #endif

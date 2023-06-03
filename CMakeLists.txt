@@ -9,6 +9,5 @@ add_executable( program
                 src/main.cpp
                 src/Sistema.cpp
                 src/Node.cpp
-                src/List.cpp
                 src/Playlist.cpp                
                 src/Musica.cpp )
