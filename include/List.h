@@ -306,6 +306,12 @@ public:
         return output;
     }
 
+    /**
+     * \brief Class destructor.
+     * 
+     * This method traverses the whole list
+     * and free the memory that was allocated.
+     */
     ~List(){
          Node<T>* temp = head;
 
