@@ -56,6 +56,40 @@ public:
     }
 
     /**
+     * \brief Copy constructor
+     * 
+     * Initializes the list by copying the 
+     * atributes of the object received by 
+     * reference as a parameter.
+     * 
+     * \param L The list that will be copied.
+     */
+    List(const List& L){
+        if(L.head == NULL) {
+            head = tail = NULL;
+            return;
+        }
+
+        Node<T>* temp = L.head;
+
+        while(temp != NULL) {
+            Node<T>* newNode = new Node<T>(temp->data);
+
+            if(head == NULL) {
+                head = newNode;
+                tail = newNode;
+            }
+            else {
+                tail->next = newNode;
+                tail = newNode;
+            }
+            temp = temp->next;
+        }
+
+        size = L.size;
+    }
+
+    /**
      * \brief Insert a Node in the list.
      * 
      * Creates a new Node of a specified type
