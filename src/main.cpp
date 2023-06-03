@@ -48,14 +48,14 @@ int main(){
 
     cout << "#############################" << endl;
 
-    // l.removeElements(l3);
+    l.removeElements(l3);
 
     cout << "#############################" << endl;
-    int target_pos = l.find(m3);
-    cout << target_pos << endl;
+    // int target_pos = l.find(m3);
+    // cout << target_pos << endl;
 
 
-    l.deleteNode(target_pos);
+    // l.deleteNode(target_pos);
     l.printList();
 
 }

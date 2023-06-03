@@ -270,6 +270,9 @@ public:
         while(temp != nullptr){
             cout << "This a test: " << temp->data << endl;
 
+            int target_pos = find(temp->data);
+            deleteNode(target_pos);
+
             temp = temp->next;
         }
     }
