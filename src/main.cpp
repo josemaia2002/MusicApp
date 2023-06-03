@@ -63,17 +63,3 @@ int main(){
     l5.printList();
 
 }
-
-
-/*
-    List<Musica> l; // Todas as musicas do sistema
-    List<Playlist> playlists; // Todas as playlists do sistema
-    Sistema app;
-
-    // app.printMenu(l, playlists);
-
-
-
-    return 0;
-
-*/    

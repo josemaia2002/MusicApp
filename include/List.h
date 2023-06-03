@@ -288,9 +288,17 @@ public:
         }
     }
 
-    // List const& l1
-    // List<Musica>& l1, List<Musica>& l2
-
+    /**
+     * \brief Overloads the + operator.
+     * 
+     * Specifies the behavior of the + operator
+     * when dealing with a list. It is going to 
+     * create a linked list, and it will receive
+     * the elements of two linked lists, and then 
+     * the result list will be returned.
+     * 
+     * \param l1 The list that will be concatenated.
+     */
     List operator+(List<Musica>& l1){
         List<Musica> output;
         output.addElements(*this);
