@@ -288,6 +288,16 @@ public:
         }
     }
 
+    // List const& l1
+    // List<Musica>& l1, List<Musica>& l2
+
+    List operator+(List<Musica>& l1){
+        List<Musica> output;
+        output.addElements(*this);
+        output.addElements(l1);
+        return output;
+    }
+
     ~List(){
          Node<T>* temp = head;
 

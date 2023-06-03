@@ -57,6 +57,10 @@ int main(){
 
     // l.deleteNode(target_pos);
     l.printList();
+    cout << "#############################" << endl;
+    cout << "#############################" << endl;
+    List<Musica> l5 = l2 + l3;
+    l5.printList();
 
 }
 
