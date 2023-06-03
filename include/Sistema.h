@@ -4,7 +4,6 @@
 #include "Node.h"
 #include "List.h"
 #include "Playlist.h"
-#include "../src/Node.cpp"
 
 using namespace std;
 

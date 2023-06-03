@@ -39,7 +39,9 @@ public:
      * 
      * Creates a new Node and sets it to point to NULL.
      */
-    Node();
+    Node(){
+        next = nullptr;
+    }
 
     /**
      * \brief Creates a new Node.
@@ -49,7 +51,10 @@ public:
      * 
      * \param data The node's value.
      */
-    Node(const T &data);
+    Node(const T &data){
+        this->data = data;
+        next = nullptr;
+    }
 };
 
 #endif
