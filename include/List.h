@@ -167,6 +167,38 @@ public:
     }
 
     /**
+     * \brief Search for a specific value.
+     * 
+     * Traverse the linked list untill the desired
+     * data is reached, and then returns the posiotion
+     * where it was found.
+     * 
+     * \param value The data that is being searched.
+     * 
+     * \return The position where the target was found.
+     */
+    int find(T &value){
+        int position = 1;
+
+        Node<T>* temp = head;
+
+        // Check if the Linked list is empty
+        if(head == nullptr)
+            return 0;
+
+        // Traverse the list
+        while(temp != nullptr){
+            if(temp->data.getTitulo() == value.getTitulo())
+                return position;
+
+            temp = temp->next;
+            position++;
+        }
+
+        return 0;
+    }
+
+    /**
      * \brief Delete a Node.
      * 
      * Traverse the linked list untill the specified position, 
@@ -226,6 +258,18 @@ public:
         // Traverse the received list and insert its elements in the current list
         while(temp != nullptr){
             insertNode(temp->data);
+            temp = temp->next;
+        }
+    }
+
+    void removeElements(List<Musica>& L){
+        // Creates a temp node that stores the head of the received linked list    
+        Node<T>* temp = L.head;
+
+        // Traverse the received list and insert its elements in the current list
+        while(temp != nullptr){
+            cout << "This a test: " << temp->data << endl;
+
             temp = temp->next;
         }
     }
