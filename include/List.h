@@ -262,6 +262,16 @@ public:
         }
     }
 
+    /**
+     * \brief Remove a list of elements from the current list.
+     * 
+     * It receives a list, traverse it and for each of its
+     * elements, the function search for them inside the current list,
+     * and deletes all of them.
+     * 
+     * \param L The list whose elements will be searched and
+     * deleted from the current list.
+     */
     void removeElements(List<Musica>& L){
         // Creates a temp node that stores the head of the received linked list    
         Node<T>* temp = L.head;
