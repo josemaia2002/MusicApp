@@ -17,18 +17,6 @@ ostream &operator<<(ostream &output, const Playlist &P) {
     return output;            
 }
 
-string Playlist::getNome() {
-    return this->nome;
-}
-
-void Playlist::setNome(string nome) {
-    this->nome = nome;
-}
-
-List<Musica>& Playlist::getMusicas() {
-    return this->musicas;
-}
-
 void Playlist::addSong(Musica& m){
     musicas.insertNode(m);
 }
@@ -44,4 +32,16 @@ void Playlist::addSong(Playlist &P){
 
 void Playlist::removeSong(Playlist &P){
     musicas.removeElements(P.getMusicas());
+}
+
+List<Musica>& Playlist::getMusicas() {
+    return this->musicas;
+}
+
+string Playlist::getNome() {
+    return this->nome;
+}
+
+void Playlist::setNome(string nome) {
+    this->nome = nome;
 }

@@ -63,11 +63,6 @@ public:
      */
     friend ostream &operator<<(ostream &output, const Playlist &P);
 
-    string getNome();
-    void setNome(string nome);
-
-    List<Musica>& getMusicas();
-
     /**
      * \brief Add a song to the playlist.
      * 
@@ -107,6 +102,11 @@ public:
      * \param P The playlist whose ellements will be removed.
      */
     void removeSong(Playlist &P);
+
+    List<Musica>& getMusicas();
+
+    string getNome();
+    void setNome(string nome);
 };
 
 #endif
