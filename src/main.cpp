@@ -34,50 +34,21 @@ int main(){
     l3.insertNode(m8);
     l3.insertNode(m9);
 
+
+    cout << "Testes" << endl;
     l.printList();
+    cout << "########################" << endl;
 
-    cout << "#############################" << endl;
+    Node<Musica>* n = new Node<Musica>(); // Create a new node;
 
-    l.addElements(l2);
+    // n->data.setTitulo("Wait and Bleed");
+    // n->data.setArtista("Slipknot");
+
+    l2 >> n;
+
+    // cout << n->data.getTitulo() << endl;
+    // cout << n->data.getArtista() << endl;
+
+    l << n;
     l.printList();
-
-    cout << "#############################" << endl;
-
-    l.addElements(l3);
-    l.printList();
-
-    cout << "#############################" << endl;
-
-    l.removeElements(l3);
-
-    cout << "#############################" << endl;
-    // int target_pos = l.find(m3);
-    // cout << target_pos << endl;
-
-
-    // l.deleteNode(target_pos);
-    l.printList();
-    cout << "#############################" << endl;
-    cout << "#############################" << endl;
-    List<Musica> l5 = l2 + l3;
-    l5.printList();
-
-    l2.extract();
-
-    Node<Musica>* n1;
-    n1 = l3.last();
-    Node<Musica>* n2;
-
-
-    cout << n1->data.getTitulo() << endl;
-    cout << n1->data.getArtista() << endl;
-
-
-    cout << "#############################" << endl;
-    
-    l2.printList();
-
-    l2 << n1;
-
-    l2.printList();
 }

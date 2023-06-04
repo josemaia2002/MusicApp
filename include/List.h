@@ -319,6 +319,11 @@ public:
         insertNode(n->data);
     }
 
+    void operator>>(Node<T>* n){
+        n->data.setTitulo(tail->data.getTitulo());
+        n->data.setArtista(tail->data.getArtista());
+    }
+
     /**
      * \brief Class destructor.
      * 
