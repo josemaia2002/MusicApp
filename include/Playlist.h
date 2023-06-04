@@ -98,6 +98,14 @@ public:
      */
     void addSong(Playlist &P);
 
+    /**
+     * \brief Overloaded version of the removeSong function.
+     * 
+     * It receives a playlist and removes all of its 
+     * elements from the playlist list of songs.
+     * 
+     * \param P The playlist whose ellements will be removed.
+     */
     void removeSong(Playlist &P);
 };
 
