@@ -306,6 +306,15 @@ public:
         return output;
     }    
 
+    /**
+     * \brief Overloads the << operator.
+     * 
+     * Specifies the behavior of the << operator
+     * when dealing with a list. It is going to 
+     * insert a node at the end of the list.
+     * 
+     * \param n The node that is going to be added.
+     */
     void operator<<(Node<T>* n){
         insertNode(n->data);
     }
