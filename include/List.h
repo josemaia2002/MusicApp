@@ -319,6 +319,16 @@ public:
         insertNode(n->data);
     }
 
+    /**
+     * \brief Overloads the >> operator.
+     * 
+     * Specifies the behavior of the >> operator
+     * when dealing with a list. It is going to 
+     * assign the last element of the list to
+     * the received node.
+     * 
+     * \param n The node that will receive the data.
+     */
     void operator>>(Node<T>* n){
         n->data.setTitulo(tail->data.getTitulo());
         n->data.setArtista(tail->data.getArtista());
