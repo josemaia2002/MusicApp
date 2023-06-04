@@ -88,6 +88,14 @@ public:
      */
     void removeSong(Musica& m);
 
+    /**
+     * \brief Overloaded version of the addSong function.
+     * 
+     * It receives a playlist and inserts all of its 
+     * elements to the playlist list of songs.
+     * 
+     * \param P The playlist whose ellements will be added.
+     */
     void addSong(Playlist &P);
 
     void removeSong(Playlist &P);
