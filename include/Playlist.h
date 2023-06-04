@@ -78,6 +78,14 @@ public:
      */
     void addSong(Musica& m);
     
+    /**
+     * \brief Remove a song from the playlist.
+     * 
+     * It receives a song and removes it from
+     * the playlist's list of songs.
+     * 
+     * \param m The song that will be removed.
+     */
     void removeSong(Musica& m);
 
     void addSong(Playlist &P);
