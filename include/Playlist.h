@@ -68,8 +68,16 @@ public:
 
     List<Musica>& getMusicas();
 
+    /**
+     * \brief Add a song to the playlist.
+     * 
+     * It receives a song and inserts it at
+     * the playlist's list of songs.
+     * 
+     * \param m The song that will be added.
+     */
     void addSong(Musica& m);
-
+    
     void removeSong(Musica& m);
 
     void addSong(Playlist &P);
