@@ -67,6 +67,10 @@ public:
     void setNome(string nome);
 
     List<Musica>& getMusicas();
+
+    void addSong(Musica& m);
+
+    
 };
 
 #endif

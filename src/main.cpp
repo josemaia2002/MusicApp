@@ -10,6 +10,10 @@ int main(){
     List<Playlist> playlists; // Todas as playlists do sistema
     Sistema app;
 
+    // app.printMenu(l, playlists);
+
+
+
     Musica m1("Pedrada", "Chico Cesar");
     Musica m2("Converter", "Mega Drive");
     Musica m3("Toxic", "Britney Spears");
@@ -39,16 +43,34 @@ int main(){
     l.printList();
     cout << "########################" << endl;
 
-    Node<Musica>* n = new Node<Musica>(); // Create a new node;
-
-    // n->data.setTitulo("Wait and Bleed");
-    // n->data.setArtista("Slipknot");
+    Node<Musica>* n = new Node<Musica>();
 
     l2 >> n;
 
-    // cout << n->data.getTitulo() << endl;
-    // cout << n->data.getArtista() << endl;
-
     l << n;
     l.printList();
+
+
+    cout << "########################" << endl;
+    cout << "########################" << endl;
+
+
+    Playlist p1, p2, p3;
+
+    p1.addSong(m5);
+    p1.addSong(m4);
+    p1.addSong(m3);
+    p1.addSong(m2);
+
+    p2.addSong(m9);
+    p2.addSong(m8);
+    p2.addSong(m7);
+    p2.addSong(m6);
+
+    p1.getMusicas().printList();
+    cout << "########################" << endl;
+
+
+
+
 }

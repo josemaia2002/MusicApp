@@ -28,3 +28,8 @@ void Playlist::setNome(string nome) {
 List<Musica>& Playlist::getMusicas() {
     return this->musicas;
 }
+
+void Playlist::addSong(Musica& m){
+    musicas.insertNode(m);
+}
+
