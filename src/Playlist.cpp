@@ -33,6 +33,12 @@ void Playlist::addSong(Musica& m){
     musicas.insertNode(m);
 }
 
+void Playlist::removeSong(Musica& m){
+    int target_pos = musicas.find(m);
+    musicas.deleteNode(target_pos);
+}
+
+
 void Playlist::addSong(Playlist &P){
     musicas.addElements(P.getMusicas());
 }

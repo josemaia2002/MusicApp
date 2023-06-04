@@ -70,6 +70,8 @@ public:
 
     void addSong(Musica& m);
 
+    void removeSong(Musica& m);
+
     void addSong(Playlist &P);
 };
 
