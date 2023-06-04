@@ -304,6 +304,10 @@ public:
         output.addElements(*this);
         output.addElements(l1);
         return output;
+    }    
+
+    void operator<<(Node<T>* n){
+        insertNode(n->data);
     }
 
     /**

@@ -62,4 +62,22 @@ int main(){
     List<Musica> l5 = l2 + l3;
     l5.printList();
 
+    l2.extract();
+
+    Node<Musica>* n1;
+    n1 = l3.last();
+    Node<Musica>* n2;
+
+
+    cout << n1->data.getTitulo() << endl;
+    cout << n1->data.getArtista() << endl;
+
+
+    cout << "#############################" << endl;
+    
+    l2.printList();
+
+    l2 << n1;
+
+    l2.printList();
 }
