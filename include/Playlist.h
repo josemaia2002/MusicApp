@@ -73,6 +73,8 @@ public:
     void removeSong(Musica& m);
 
     void addSong(Playlist &P);
+
+    void removeSong(Playlist &P);
 };
 
 #endif

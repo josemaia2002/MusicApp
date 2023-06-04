@@ -71,12 +71,13 @@ int main(){
     cout << "########################" << endl;
 
     p3.addSong(p2);
+    p3.addSong(p1);
     p3.getMusicas().printList();
 
     cout << "########################" << endl;
     cout << "########################" << endl;
 
-    p3.removeSong(m9);
+    p3.removeSong(p2);
     p3.getMusicas().printList();
 
 }

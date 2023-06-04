@@ -38,7 +38,10 @@ void Playlist::removeSong(Musica& m){
     musicas.deleteNode(target_pos);
 }
 
-
 void Playlist::addSong(Playlist &P){
     musicas.addElements(P.getMusicas());
+}
+
+void Playlist::removeSong(Playlist &P){
+    musicas.removeElements(P.getMusicas());
 }
