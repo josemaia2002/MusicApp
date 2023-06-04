@@ -33,3 +33,6 @@ void Playlist::addSong(Musica& m){
     musicas.insertNode(m);
 }
 
+void Playlist::addSong(Playlist &P){
+    musicas.addElements(P.getMusicas());
+}

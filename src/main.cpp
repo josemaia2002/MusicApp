@@ -70,7 +70,7 @@ int main(){
     p1.getMusicas().printList();
     cout << "########################" << endl;
 
-
-
+    p3.addSong(p2);
+    p3.getMusicas().printList();
 
 }
