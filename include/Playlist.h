@@ -154,6 +154,18 @@ public:
      */
     Playlist operator-(Playlist &P);
 
+    /**
+     * \brief Overloads the - operator.
+     * 
+     * Specifies the behavior of the - operator
+     * when dealing with a playlist and a song. It is going to 
+     * create a new playlist, and this playlist will
+     * have all the elements of the first playlist, but without
+     * the song that was received as a paramenter, and then 
+     * the result playlist will be returned.
+     * 
+     * \param m The song that will be subtracted.
+     */
     Playlist operator-(Musica &m);
 
     List<Musica>& getMusicas();
