@@ -114,6 +114,8 @@ public:
      */
     void removeSong(Playlist &P);
 
+    Playlist operator+(Playlist &P);
+
     List<Musica>& getMusicas();
 
     string getNome();

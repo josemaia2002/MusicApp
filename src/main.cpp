@@ -38,22 +38,9 @@ int main(){
 
 
     cout << "Testes" << endl;
-    l.printList();
     cout << "########################" << endl;
 
-    Node<Musica>* n = new Node<Musica>();
-
-    l2 >> n;
-
-    l << n;
-    l.printList();
-
-
-    cout << "########################" << endl;
-    cout << "########################" << endl;
-
-
-    Playlist p1, p2, p3;
+    Playlist p1, p2, p4;
 
     p1.addSong(m9);
     p1.addSong(m8);
@@ -62,14 +49,21 @@ int main(){
     p2.addSong(m6);
     p2.addSong(m5);
     p2.addSong(m4);
+    p2.addSong(m9);
+    p2.addSong(m7);
 
-    p3.addSong(m3);
-    p3.addSong(m2);
-    p3.addSong(m1);
+    p4.addSong(m3);
+    p4.addSong(m2);
+    p4.addSong(m1);
+
+    Playlist p3 = p1 + p2;
+
+    p3.getMusicas().printList();
+
+
 
     cout << "########################" << endl;
-    cout << "########################" << endl;
+    
 
-    Playlist p4 = p3;
-    p4.getMusicas().printList();
+    cout << p3.getMusicas().size << endl;
 }
