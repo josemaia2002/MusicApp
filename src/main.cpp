@@ -1,4 +1,6 @@
 #include <iostream>
+#include <fstream>
+#include <sstream>
 #include <string>
 #include <vector>
 #include "Sistema.h"
@@ -6,73 +8,88 @@
 using namespace std;
 
 int main(){
-    List<Musica> l, l2, l3; // Todas as musicas do sistema
+    List<Musica> l; // Todas as musicas do sistema
     List<Playlist> playlists; // Todas as playlists do sistema
     Sistema app;
 
+    // Leitura do arquivo
+    int file_size = 0;
+
+    fstream arquivo;
+    string text;
+
+    arquivo.open("../data/info.txt",ios::in);
+    while(getline(arquivo, text)){
+        file_size++;
+    }
+    arquivo.close(); 
+
+
+    string lines[file_size];
+    int i = 0;
+       
+    arquivo.open("../data/info.txt",ios::in);
+    if(arquivo.is_open()){   
+        while(getline(arquivo, text)){
+            lines[i] = text;
+            i++;
+        }
+        arquivo.close(); 
+    }
+    arquivo.close();
+
+
+    // Leitura de cada linha
+    string s, str;
+    for(int step = 0; step < file_size; step++){
+        s = lines[step];
+
+        int tam = s.size();
+        int count = 0;
+
+        char ch = ',';
+     
+        for(i = 0; (i = s.find(ch, i)) != string::npos; i++){
+            count++;
+        }
+     
+        stringstream ss(s); 
+
+        getline(ss, str, ';');
+        cout << "Playlist: " << str << endl;
+        Playlist p;
+        p.setNome(str);
+        playlists.insertNode(p);
+
+        for(i = 0; i <= count; i++){
+            Musica m;
+            string titulo, artista;
+
+            getline(ss, str, ':');
+            cout << "Titulo: " << str << endl;
+            titulo = str;
+
+            getline(ss, str, ',');
+            cout << "Artista: " << str << endl;
+            artista = str;
+
+            m = Musica(titulo, artista); 
+            l.insertNode(m);
+        }
+    }
+
+    cout << "################" << endl;
+    cout << "Playlists" << endl;
+
+    playlists.printList();
+
+    cout << "################" << endl;
+    cout << "Musicas" << endl;
+    l.printList();
+
+
     // app.printMenu(l, playlists);
 
-    Musica m1("Pedrada", "Chico Cesar");
-    Musica m2("Converter", "Mega Drive");
-    Musica m3("Toxic", "Britney Spears");
 
-    Musica m4("Borderline", "Tame Impala");
-    Musica m5("Shape of You", "Ed Sheeran");
-    Musica m6("Bad Romance", "Lady Gaga");
-
-    Musica m7("Michelle", "Beatles");
-    Musica m8("Lucy in the Sky with Diamonds", "Beatles");
-    Musica m9("Help!", "Beatles");
-
-    Musica m10;
-
-    l.insertNode(m1);
-    l.insertNode(m2);
-    l.insertNode(m3);
-
-    l2.insertNode(m4);
-    l2.insertNode(m5);
-    l2.insertNode(m6);
-
-    l3.insertNode(m7);
-    l3.insertNode(m8);
-    l3.insertNode(m9);
-
-
-    cout << "Testes" << endl;
-    cout << "########################" << endl;
-
-    Playlist p1, p2, p4;
-
-    p1.addSong(m9);
-    p1.addSong(m8);
-    p1.addSong(m7);
-
-    p2.addSong(m6);
-    p2.addSong(m5);
-    p2.addSong(m4);
-    p2.addSong(m9);
-    p2.addSong(m7);
-
-    p4.addSong(m3);
-    p4.addSong(m2);
-    p4.addSong(m1);
-
-
-    cout << "########################" << endl;
-
-    Playlist p5 = p1 - m9;
-
-    p5 << m1;
-    p5 << m2;
-
-    p5.getMusicas().printList();
-
-    p5 >> m10;
-
-    cout << "########################" << endl;
-    cout << m10 << endl;
-    cout << "########################" << endl;
-
-    p5.getMusicas().printList();
+    return 0;
 }
