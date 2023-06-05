@@ -50,9 +50,16 @@ public:
      */
     Playlist(string nome);
 
+    /**
+     * \brief Copy constructor
+     * 
+     * Initializes the playlist by copying the 
+     * atributes of the object received by 
+     * reference as a parameter.
+     * 
+     * \param P The playlist that will be copied.
+     */
     Playlist(Playlist& P);
-
-    
 
     /**
      * \brief Overloads the << operator.
