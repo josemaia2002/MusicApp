@@ -127,6 +127,17 @@ public:
      */
     Playlist operator+(Playlist &P);
 
+    /**
+     * \brief Overloaded version of the operator+.
+     * 
+     * Specifies the behavior of the + operator
+     * when dealing with a playlist and a song. It is going to 
+     * create a new playlist, and it will receive
+     * the elements of the playlists and add the song to the end
+     * of the playlist, and then the result playlist will be returned.
+     * 
+     * \param m The song that will be added to the playlist.
+     */
     Playlist operator+(Musica &m);
 
     List<Musica>& getMusicas();
