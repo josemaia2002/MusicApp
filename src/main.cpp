@@ -24,6 +24,8 @@ int main(){
     Musica m8("Lucy in the Sky with Diamonds", "Beatles");
     Musica m9("Help!", "Beatles");
 
+    Musica m10;
+
     l.insertNode(m1);
     l.insertNode(m2);
     l.insertNode(m3);
@@ -63,8 +65,14 @@ int main(){
 
     p5 << m1;
     p5 << m2;
-    p5 << m3;
 
     p5.getMusicas().printList();
 
+    p5 >> m10;
+
+    cout << "########################" << endl;
+    cout << m10 << endl;
+    cout << "########################" << endl;
+
+    p5.getMusicas().printList();
 }

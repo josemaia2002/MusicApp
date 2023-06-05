@@ -187,6 +187,8 @@ public:
      */
     void operator<<(Musica &m);
 
+    void operator>>(Musica &m);
+
     List<Musica>& getMusicas();
 
     string getNome();

@@ -96,6 +96,13 @@ void Playlist::operator<<(Musica &m){
     addSong(m);
 }
 
+void Playlist::operator>>(Musica &m){
+    m.setTitulo(musicas.tail->data.getTitulo());
+    m.setArtista(musicas.tail->data.getArtista());
+
+    removeSong(m);
+}
+
 List<Musica>& Playlist::getMusicas() {
     return this->musicas;
 }
