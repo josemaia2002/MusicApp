@@ -124,6 +124,8 @@ public:
      * of elements, and then the result playlist will be returned.
      * 
      * \param P The playlist that will be concatenated.
+     * 
+     * \return The concatenation between the playlists.
      */
     Playlist operator+(Playlist &P);
 
@@ -137,6 +139,8 @@ public:
      * of the playlist, and then the result playlist will be returned.
      * 
      * \param m The song that will be added to the playlist.
+     * 
+     * \return The concatenation between the playlist and the song.
      */
     Playlist operator+(Musica &m);
 
@@ -151,6 +155,8 @@ public:
      * the result playlist will be returned.
      * 
      * \param P The playlist whose elementes will be subtracted.
+     * 
+     * \return The difference between the playlists.
      */
     Playlist operator-(Playlist &P);
 
@@ -165,6 +171,8 @@ public:
      * the result playlist will be returned.
      * 
      * \param m The song that will be subtracted.
+     * 
+     * \return The difference between the playlist and the song.
      */
     Playlist operator-(Musica &m);
 
