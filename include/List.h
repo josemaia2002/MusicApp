@@ -296,6 +296,8 @@ public:
      * the result list will be returned.
      * 
      * \param l1 The list that will be concatenated.
+     * 
+     * \return The concatenation between the lists.
      */
     List operator+(List<Musica>& l1){
         List<Musica> output;
