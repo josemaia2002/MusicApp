@@ -66,6 +66,24 @@ Playlist Playlist::operator+(Musica &m){
     return output;
 }
 
+Playlist Playlist::operator-(Playlist &P){
+    Playlist output;
+
+    int play_size = this->getMusicas().size;
+    int count = 0;
+
+    Node<Musica>* n1;
+
+    for(int i = 1; i <= play_size; i++){
+        n1 = this->getMusicas().search(i);
+
+        if(P.getMusicas().find(n1->data) == 0)
+            output.addSong(n1->data);
+    }
+
+    return output;
+}
+
 List<Musica>& Playlist::getMusicas() {
     return this->musicas;
 }

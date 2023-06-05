@@ -140,6 +140,8 @@ public:
      */
     Playlist operator+(Musica &m);
 
+    Playlist operator-(Playlist &P);
+
     List<Musica>& getMusicas();
 
     string getNome();

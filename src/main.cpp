@@ -56,14 +56,11 @@ int main(){
     p4.addSong(m2);
     p4.addSong(m1);
 
-    Playlist p3 = p1 + m2;
-
-    p3.getMusicas().printList();
-
-
 
     cout << "########################" << endl;
-    
 
-    cout << p3.getMusicas().size << endl;
+    Playlist p5 = p2 - p1;
+    p5.getMusicas().printList();
+
+
 }
