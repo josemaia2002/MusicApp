@@ -114,6 +114,17 @@ public:
      */
     void removeSong(Playlist &P);
 
+    /**
+     * \brief Overloads the + operator.
+     * 
+     * Specifies the behavior of the + operator
+     * when dealing with playlists. It is going to 
+     * create a new playlist, and it will receive
+     * the elements of two playlists without repetition 
+     * of elements, and then the result playlist will be returned.
+     * 
+     * \param P The playlist that will be concatenated.
+     */
     Playlist operator+(Playlist &P);
 
     List<Musica>& getMusicas();
