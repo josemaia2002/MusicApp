@@ -59,7 +59,7 @@ int main(){
 
     cout << "########################" << endl;
 
-    Playlist p5 = p2 - p1;
+    Playlist p5 = p1 - m9;
     p5.getMusicas().printList();
 
 
