@@ -140,6 +140,18 @@ public:
      */
     Playlist operator+(Musica &m);
 
+    /**
+     * \brief Overloads the - operator.
+     * 
+     * Specifies the behavior of the - operator
+     * when dealing with playlists. It is going to 
+     * create a new playlist, and this playlist will
+     * have all the elements of the first playlist
+     * that are not elements of the second playlist, and then 
+     * the result playlist will be returned.
+     * 
+     * \param P The playlist whose elementes will be subtracted.
+     */
     Playlist operator-(Playlist &P);
 
     List<Musica>& getMusicas();
