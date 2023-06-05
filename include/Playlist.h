@@ -187,6 +187,17 @@ public:
      */
     void operator<<(Musica &m);
 
+    /**
+     * \brief Overloads the >> operator.
+     * 
+     * Specifies the behavior of the >> operator
+     * when dealing with a playlist. It is going to 
+     * remove the last song of the playlist and set 
+     * its atributes to the song received as a parameter.
+     * 
+     * \param m The song that is going to receive the 
+     * last song of the playlist.
+     */
     void operator>>(Musica &m);
 
     List<Musica>& getMusicas();
