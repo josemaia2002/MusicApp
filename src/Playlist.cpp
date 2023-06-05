@@ -58,6 +58,14 @@ Playlist Playlist::operator+(Playlist &P){
     return output;
 }
 
+Playlist Playlist::operator+(Musica &m){
+    Playlist output;
+    output.addSong(*this);
+    output.addSong(m);
+    
+    return output;
+}
+
 List<Musica>& Playlist::getMusicas() {
     return this->musicas;
 }

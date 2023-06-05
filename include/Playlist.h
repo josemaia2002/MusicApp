@@ -127,6 +127,8 @@ public:
      */
     Playlist operator+(Playlist &P);
 
+    Playlist operator+(Musica &m);
+
     List<Musica>& getMusicas();
 
     string getNome();
