@@ -56,40 +56,25 @@ int main(){
         stringstream ss(s); 
 
         getline(ss, str, ';');
-        cout << "Playlist: " << str << endl;
         Playlist p;
         p.setNome(str);
-        playlists.insertNode(p);
 
         for(i = 0; i <= count; i++){
             Musica m;
             string titulo, artista;
 
             getline(ss, str, ':');
-            cout << "Titulo: " << str << endl;
             titulo = str;
 
             getline(ss, str, ',');
-            cout << "Artista: " << str << endl;
             artista = str;
 
             m = Musica(titulo, artista); 
             l.insertNode(m);
         }
+        playlists.insertNode(p);
     }
-
-    cout << "################" << endl;
-    cout << "Playlists" << endl;
-
-    playlists.printList();
-
-    cout << "################" << endl;
-    cout << "Musicas" << endl;
-    l.printList();
-
-
-    // app.printMenu(l, playlists);
-
+    app.printMenu(l, playlists);
 
     return 0;
 }

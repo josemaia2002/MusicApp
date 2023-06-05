@@ -127,7 +127,6 @@ public:
 
         // Check if the Linked list is empty
         if(head == nullptr){
-            cout << "Hello hello" << endl;
             return;
         }
 
