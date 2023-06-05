@@ -60,7 +60,11 @@ int main(){
     cout << "########################" << endl;
 
     Playlist p5 = p1 - m9;
-    p5.getMusicas().printList();
 
+    p5 << m1;
+    p5 << m2;
+    p5 << m3;
+
+    p5.getMusicas().printList();
 
 }

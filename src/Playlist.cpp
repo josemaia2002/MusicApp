@@ -92,6 +92,10 @@ Playlist Playlist::operator-(Musica &m){
     return output;
 }
 
+void Playlist::operator<<(Musica &m){
+    addSong(m);
+}
+
 List<Musica>& Playlist::getMusicas() {
     return this->musicas;
 }
