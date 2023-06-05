@@ -50,6 +50,10 @@ public:
      */
     Playlist(string nome);
 
+    Playlist(Playlist& P);
+
+    
+
     /**
      * \brief Overloads the << operator.
      * 

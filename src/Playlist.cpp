@@ -12,6 +12,11 @@ Playlist::Playlist(string nome){
     this->nome = nome;
 }
 
+Playlist::Playlist(Playlist& P){
+    nome = P.nome;
+    musicas.addElements(P.getMusicas());
+}
+
 ostream &operator<<(ostream &output, const Playlist &P) { 
     output << "Nome: " << P.nome << endl;
     return output;            
