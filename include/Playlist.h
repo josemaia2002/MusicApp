@@ -176,6 +176,15 @@ public:
      */
     Playlist operator-(Musica &m);
 
+    /**
+     * \brief Overloads the << operator.
+     * 
+     * Specifies the behavior of the << operator
+     * when dealing with a playlist. It is going to 
+     * insert a song at the end of the playlist.
+     * 
+     * \param m The song that is going to be added.
+     */
     void operator<<(Musica &m);
 
     List<Musica>& getMusicas();
