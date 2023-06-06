@@ -49,7 +49,7 @@ int main(){
 
         char ch = ',';
      
-        for(i = 0; (i = s.find(ch, i)) != string::npos; i++){
+        for(int j = 0; (j = s.find(ch, j)) != string::npos; j++){
             count++;
         }
      
@@ -58,8 +58,8 @@ int main(){
         getline(ss, str, ';');
         Playlist p;
         p.setNome(str);
-
-        for(i = 0; i <= count; i++){
+        
+        for(int k = 0; k <= count; k++){
             Musica m;
             string titulo, artista;
 
@@ -70,6 +70,7 @@ int main(){
             artista = str;
 
             m = Musica(titulo, artista); 
+            p.addSong(m);
             l.insertNode(m);
         }
         playlists.insertNode(p);
